@@ -7,10 +7,10 @@ package domaine;
  * @author Adminl
  *
  */
-public class Personne {
+public abstract class Personne {
 	private int id;
-	private String nom;
-	private String prenom;
+	protected String nom;
+	protected String prenom;
 	
 	/**
 	 * consructeur avec paramètres
