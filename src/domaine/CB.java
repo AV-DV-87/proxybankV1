@@ -90,7 +90,7 @@ public class CB {
 	 */
 	@Override
 	public String toString() {
-		return "CB [id=" + id + ", code=" + code + "]";
+		return "CB [id=" + id + ", code=" + code + ", proprietaire=" + proprietaire + "]";
 	}
 	
 	
