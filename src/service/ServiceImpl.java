@@ -24,7 +24,7 @@ public class ServiceImpl implements Iservice {
 		agences.put(a.getId(), a);
 		return agences;
 	}
-
+	
 	@Override
 	public void modifierAgence(Agence a) {
 		
@@ -60,7 +60,7 @@ public class ServiceImpl implements Iservice {
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 	@Override
 	public void supprimerCB(CB cb) {
 		// TODO Auto-generated method stub
@@ -121,6 +121,18 @@ public class ServiceImpl implements Iservice {
 			 }
 		 }
 	}
+	
+	@Override
+	public void crediterCompte(Compte c, double mt) {
+		// TODO crediter gérer exceptions ou if
+		c.setSolde(c.getSolde() + mt);
+	}
+
+	@Override
+	public void debiterCompte(Compte c, double mt) {
+		// TODO debiter 
+		c.setSolde(c.getSolde() - mt);
+	}
 
 	//-----------------------------PERSONNES-----------------------------
 	
@@ -148,22 +160,18 @@ public class ServiceImpl implements Iservice {
 		
 	}
 
-	@Override
-	public void ajouterVirement(Virement v, Compte c1, Compte c2) {
-		
-		
-	}
 
+	
+	//-----------------------------VIREMENT-----------------------------
+	
 	@Override
-	public void crediterCompte(Compte c, double mt) {
-		// TODO crediter gérer exceptions ou if
-		c.setSolde(c.getSolde() + mt);
-	}
-
-	@Override
-	public void debiterCompte(Compte c, double mt) {
-		// TODO debiter 
-		c.setSolde(c.getSolde() - mt);
+	public void executerVirement(Virement v, Compte cd, Compte cc) {
+		
+		//1. debiter le compte du montant saisi à la création du virement
+		debiterCompte(cd, v.getMontant());
+		
+		//2. crediter ce même montant saisi à la création du virement
+		debiterCompte(cc, v.getMontant());		
 	}
 
 	

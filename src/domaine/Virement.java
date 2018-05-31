@@ -47,6 +47,64 @@ public class Virement {
 		super();
 		
 	}
+	
+	//GETTER AND SETTER
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the montant
+	 */
+	public double getMontant() {
+		return montant;
+	}
+
+	/**
+	 * @param montant the montant to set
+	 */
+	public void setMontant(double montant) {
+		this.montant = montant;
+	}
+
+	/**
+	 * @return the dateVirement
+	 */
+	public String getDateVirement() {
+		return dateVirement;
+	}
+
+	/**
+	 * @param dateVirement the dateVirement to set
+	 */
+	public void setDateVirement(String dateVirement) {
+		this.dateVirement = dateVirement;
+	}
+
+	/**
+	 * @return the description
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * @param description the description to set
+	 */
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
