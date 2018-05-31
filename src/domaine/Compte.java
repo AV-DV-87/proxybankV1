@@ -11,10 +11,10 @@ package domaine;
 public abstract class Compte {
 	
 	private int id;
-	private double solde;
-	private String dateOuverture;
-	private Client proprietaire;
-	private Virement operations;
+	protected double solde;
+	protected String dateOuverture;
+	protected Client proprietaire;
+	protected Virement operations;
 	
 	//CONSTRUCTEUR
 	/**
