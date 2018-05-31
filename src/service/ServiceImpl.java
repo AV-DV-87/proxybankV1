@@ -13,7 +13,7 @@ import domaine.Virement;
 public class ServiceImpl implements Iservice {
 	
 	//DECLARATION ET INITIALISATION MAP POUR SIMULATION BDD
-	private Map<Integer,Personne> personnes = new Hashtable<Integer,Personne>();
+	private Map<Integer,Client> clients = new Hashtable<Integer,Client>();
     private Map<Integer,Compte> comptes = new Hashtable<Integer,Compte>();
 	private Map<Integer,Agence> agences = new Hashtable<Integer,Agence>();
 	private  Map<Integer, CB> CBlist = new Hashtable<Integer,CB>();
@@ -133,9 +133,9 @@ public class ServiceImpl implements Iservice {
 	//-----------------------------CLIENTS-----------------------------
 	
 		@Override
-		public Map<Integer, Client> ajouterClient(Client p) {
-			// TODO Auto-generated method stub
-			return null;
+		public Map<Integer, Client> ajouterClient(Client cl) {
+			clients.put(cl.getId(), cl);
+			return clients;
 		}
 
 		@Override
@@ -152,8 +152,15 @@ public class ServiceImpl implements Iservice {
 
 		@Override
 		public void listeClient(Map<Integer, Client> clients) {
-			// TODO Auto-generated method stub
-			
+			for (Map.Entry<Integer, Client> entry : clients.entrySet()) {
+				 System.out.println(entry);
+				 if(entry.getValue().getListCompte()!=null)
+				 {
+					 for (Compte compte : entry.getValue().getListCompte()) {
+						System.out.println(compte);
+					}
+				 }
+			 }
 		}
 		
 		@Override
@@ -173,7 +180,18 @@ public class ServiceImpl implements Iservice {
 		debiterCompte(cd, v.getMontant());
 		
 		//2. crediter ce même montant saisi à la création du virement
-		debiterCompte(cc, v.getMontant());		
+		crediterCompte(cc, v.getMontant());
+		
+		//3. Affiche un message 
+		System.out.println("Un virement de "+v.getMontant()+"€ a été effectué du compte numéro " +cd.getId()+" au compte numéro "+cc.getId()+".");
+		
+	}
+
+	@Override
+	public Map<Integer, Virement> creerVirement(Virement v) {
+		virements.put(v.getId(), v);
+		return virements;
+		
 	}	
 	
 	

@@ -78,6 +78,11 @@ public interface Iservice {
 	
 	//VIREMENT
 	/**
+	 * Stockage d'un virement dans une Collection.
+	 * @param Virement
+	 */
+	public Map<Integer, Virement> creerVirement(Virement v);
+	/**
 	 * Cette méthode permet d'éxécuter un virement v, en débitant un compte
 	 * c1 et en créditant un compte c2.
 	 * 
