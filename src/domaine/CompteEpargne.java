@@ -25,8 +25,8 @@ public class CompteEpargne extends Compte {
 	 * Cosntructeur tous attributs.
 	 * @param taux
 	 */
-	public CompteEpargne(double taux) {
-		super();
+	public CompteEpargne(int id, double solde, String dateOuverture,double taux) {
+		super(id, solde, dateOuverture);
 		this.taux = taux;
 	}
 

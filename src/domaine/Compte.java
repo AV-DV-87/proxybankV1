@@ -14,7 +14,7 @@ public abstract class Compte {
 	protected double solde;
 	protected String dateOuverture;
 	protected Client proprietaire;
-	protected Virement operations;
+	
 	
 	//CONSTRUCTEUR
 	/**
@@ -30,16 +30,12 @@ public abstract class Compte {
 	 * @param id
 	 * @param solde
 	 * @param dateOuverture
-	 * @param proprietaire
-	 * @param operations
 	 */
-	public Compte(int id, double solde, String dateOuverture, Client proprietaire, Virement operations) {
+	public Compte(int id, double solde, String dateOuverture) {
 		super();
 		this.id = id;
 		this.solde = solde;
 		this.dateOuverture = dateOuverture;
-		this.proprietaire = proprietaire;
-		this.operations = operations;
 	}
 
 
@@ -106,22 +102,6 @@ public abstract class Compte {
 	 */
 	public void setProprietaire(Client proprietaire) {
 		this.proprietaire = proprietaire;
-	}
-
-
-	/**
-	 * @return the operations
-	 */
-	public Virement getOperations() {
-		return operations;
-	}
-
-
-	/**
-	 * @param operations the operations to set
-	 */
-	public void setOperations(Virement operations) {
-		this.operations = operations;
 	}
 
 	

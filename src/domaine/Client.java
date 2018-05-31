@@ -21,17 +21,15 @@ public class Client extends Personne {
 	 * @param id
 	 * @param nom
 	 * @param prenom
-	 * @param listCompte
 	 * @param carte
 	 * @param adresse
 	 * @param codeP
 	 * @param ville
 	 * @param tel
 	 */
-	public Client(int id, String nom, String prenom, Collection<Compte> listCompte, CB carte, String adresse,
+	public Client(int id, String nom, String prenom, CB carte, String adresse,
 			String codeP, String ville, String tel) {
 		super(id, nom, prenom);
-		listCompte = listCompte;
 		this.carte = carte;
 		adresse = adresse;
 		this.codeP = codeP;
@@ -40,7 +38,7 @@ public class Client extends Personne {
 	}
 
 	/**
-	 * constructeur saans paramètre
+	 * constructeur par défaut
 	 * @param id
 	 * @param nom
 	 * @param prenom
