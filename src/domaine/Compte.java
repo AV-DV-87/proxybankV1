@@ -134,10 +134,4 @@ public abstract class Compte {
 	public String toString() {
 		return "Compte [id=" + id + ", solde=" + solde + ", dateOuverture=" + dateOuverture + "]";
 	}
-	
-	
-	
-	
-	
-	
 }
