@@ -150,7 +150,7 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void ajouterVirement(Virement v, Compte c1, Compte c2) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
@@ -162,7 +162,7 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void debiterCompte(Compte c, double mt) {
-		// TODO Auto-generated method stub
+		// TODO debiter 
 		c.setSolde(c.getSolde() - mt);
 	}
 
