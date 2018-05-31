@@ -25,9 +25,9 @@ public interface Iservice {
 	 * @param Agence
 	 */
 	public void modifierAgence(Agence a);
-	
 	public void supprimerAgence(Agence a);
 	public void listeAgence(Map<Integer, Agence> agences);
+	public void afficherClient(Client c);
 	
 	//AUDITEUR
 	public Map<Integer, Compte> afficherComptesDebiteurs(Agence a);
@@ -41,11 +41,24 @@ public interface Iservice {
 	 */
 	public void modifierCB(CB cb);
 	public void supprimerCB(CB cb);
-	
 	public void listeCB(Map<Integer, Map> CBlist);
 	
 	//CLIENT
-	public void afficherClient(Client c);
+	public Map<Integer, Client> ajouterClient(Client p);
+	/**
+	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
+	 * @author Arnaud
+	 * @param Agence
+	 */
+	public void modifierClient(Client p);
+	public void supprimerClient(Client p);
+	public void listeClient(Map<Integer, Client> clients);
+	/**
+	 * Permet d'attribuer un Compte à un Client.
+	 * 
+	 * @param Compte
+	 * @param Client
+	 */
 	public void attribuerCompte(Compte c, Client cl);
 	public void atttribuerCB(CB cb, Client c);
 	
@@ -62,16 +75,6 @@ public interface Iservice {
 	public void crediterCompte(Compte c, double mt);
 	public void debiterCompte(Compte c, double mt);
 	
-	//PERSONNE
-	public Map<Integer, Personne> ajouterPersonne(Personne p);
-	/**
-	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
-	 * @author Arnaud
-	 * @param Agence
-	 */
-	public void modifierPersonne(Personne p);
-	public void supprimerPersonne(Personne p);
-	public void listePersonne(Map<Integer, Personne> personnes);
 	
 	//VIREMENT
 	/**

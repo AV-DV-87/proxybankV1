@@ -21,16 +21,14 @@ public class Client extends Personne {
 	 * @param id
 	 * @param nom
 	 * @param prenom
-	 * @param carte
 	 * @param adresse
 	 * @param codeP
 	 * @param ville
 	 * @param tel
 	 */
-	public Client(int id, String nom, String prenom, CB carte, String adresse,
+	public Client(int id, String nom, String prenom, String adresse,
 			String codeP, String ville, String tel) {
 		super(id, nom, prenom);
-		this.carte = carte;
 		adresse = adresse;
 		this.codeP = codeP;
 		this.ville = ville;
@@ -39,12 +37,9 @@ public class Client extends Personne {
 
 	/**
 	 * constructeur par défaut
-	 * @param id
-	 * @param nom
-	 * @param prenom
 	 */
-	public Client(int id, String nom, String prenom) {
-		super(id, nom, prenom);
+	public Client() {
+		super();
 	}
 
 	/**

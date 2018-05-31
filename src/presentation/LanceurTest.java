@@ -14,14 +14,39 @@ import service.ServiceImpl;
 
 public class LanceurTest {
 	public static void main(String[] args) {
+		
+		//---------------DECLARATION INSTANCIATION SERVICE---------------
+		Iservice service = new ServiceImpl();
+		
 		//---------------SIMULATION STRUCTURE BDD---------------
 		//table personne
 		Map<Integer, Client> resultatsCl = new Hashtable<Integer, Client>();
+		Client cl1 = new Client(1,"Martin","Jeremy", "Rue1", "75000", "Paris","0650456578");
+		Client cl2 = new Client(2,"Gates","Badr", "Rue2", "75000", "Paris","0650656878");
 		
 		//table compte
 		Map<Integer, Compte> resultatsC = new Hashtable<Integer, Compte>();
+		Compte ce = new CompteEpargne(1, 5000.00,"31/05/2018", 0.04);
+		Compte cc = new CompteCourant(2, 8000.00,"31/05/2018", 1000.00);
+		Compte cc2 = new CompteCourant(2, 15000.00,"31/05/2018", 1000.00);
+		Compte ce2 = new CompteEpargne(2, 1000000.00,"31/05/2018", 0.06);
+		resultatsC = service.ajouterCompte(ce);
+		resultatsC = service.ajouterCompte(cc);
+		resultatsC = service.ajouterCompte(cc2);
+		resultatsC = service.ajouterCompte(ce2);
+		
+		
 		//table des virements
 		Map<Integer, Virement> resultatsVi = new Hashtable<Integer, Virement>();
+		
+		//attribuer les comptes aux client
+		service.attribuerCompte(cc, cl1);
+		service.attribuerCompte(ce, cl1);
+		service.attribuerCompte(cc2, cl2);
+		service.attribuerCompte(ce2, cl2);
+		
+		service.listeCompte(resultatsC);
+		
 		
 	}
 }

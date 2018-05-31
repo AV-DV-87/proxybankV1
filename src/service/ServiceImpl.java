@@ -19,6 +19,7 @@ public class ServiceImpl implements Iservice {
 	private  Map<Integer, CB> CBlist = new Hashtable<Integer,CB>();
 	private Map<Integer, Virement> virements = new Hashtable<Integer, Virement>();
 	
+	//-----------------------------AGENCES-----------------------------
 	@Override
 	public Map<Integer, Agence> ajouterAgence(Agence a) {
 		agences.put(a.getId(), a);
@@ -48,7 +49,8 @@ public class ServiceImpl implements Iservice {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
+	//-----------------------------CB-----------------------------
 	@Override
 	public Map<Integer, CB> ajouterCB(CB cb) {
 		CBlist.put(cb.getId(), cb);
@@ -75,12 +77,6 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void afficherClient(Client c) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void attribuerCompte(Compte c, Client cl) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -117,7 +113,7 @@ public class ServiceImpl implements Iservice {
 			 System.out.println(entry);
 			 if(entry.getValue().getProprietaire()!=null)
 			 {
-				 System.out.println("proriétaire="+entry.getValue().getProprietaire());
+				 System.out.println("proriétaire="+entry.getValue().getProprietaire().getNom()+" "+entry.getValue().getProprietaire().getPrenom());
 			 }
 		 }
 	}
@@ -134,33 +130,39 @@ public class ServiceImpl implements Iservice {
 		c.setSolde(c.getSolde() - mt);
 	}
 
-	//-----------------------------PERSONNES-----------------------------
+	//-----------------------------CLIENTS-----------------------------
 	
-	@Override
-	public Map<Integer, Personne> ajouterPersonne(Personne p) {
-		personnes.put(p.getId(), p);
-		return personnes;
-	}
+		@Override
+		public Map<Integer, Client> ajouterClient(Client p) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 
-	@Override
-	public void modifierPersonne(Personne p) {
-		// TODO Auto-generated method stub
+		@Override
+		public void modifierClient(Client p) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void supprimerClient(Client p) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void listeClient(Map<Integer, Client> clients) {
+			// TODO Auto-generated method stub
+			
+		}
 		
-	}
-
-	@Override
-	public void supprimerPersonne(Personne p) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void listePersonne(Map<Integer, Personne> personnes) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
+		@Override
+		public void attribuerCompte(Compte c, Client cl) {
+			//récupère la liste des comptes du client et ajoute le compte
+			cl.getListCompte().add(c);
+			//a l'inverse défini le client comme propriétaire du compte
+			c.setProprietaire(cl);
+		}
 	
 	//-----------------------------VIREMENT-----------------------------
 	
@@ -172,9 +174,7 @@ public class ServiceImpl implements Iservice {
 		
 		//2. crediter ce même montant saisi à la création du virement
 		debiterCompte(cc, v.getMontant());		
-	}
-
-	
+	}	
 	
 	
 }
