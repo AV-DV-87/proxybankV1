@@ -41,6 +41,8 @@ public interface Iservice {
 	public void modifierCompte(Compte c);
 	public void supprimerCompte(Compte c);
 	public void listeCompte(Map<Integer, Compte> comptes);
+	public void crediterCompte(Compte c, double mt);
+	public void debiterCompte(Compte c, double mt);
 	
 	//PERSONNE
 	public Map<Integer, Personne> ajouterPersonne(Personne p);
