@@ -1,6 +1,16 @@
 package presentation;
 
+import java.util.Hashtable;
+import java.util.Map;
 import java.util.Scanner;
+
+import domaine.Client;
+import domaine.Compte;
+import domaine.CompteCourant;
+import domaine.CompteEpargne;
+import domaine.Virement;
+import service.Iservice;
+import service.ServiceImpl;
 
 /**
  * la classe lanceur permet d'echanger avec l'utilisateur
@@ -12,6 +22,44 @@ public class Lanceur {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//---------------DECLARATION INSTANCIATION SERVICE---------------
+				Iservice service = new ServiceImpl();
+				
+				//---------------SIMULATION STRUCTURE BDD---------------
+				
+				//table client
+				Map<Integer, Client> resultatsCl = new Hashtable<Integer, Client>();
+				Client cl1 = new Client(1,"Martin","Jeremy", "Rue1", "75000", "Paris","0650456578");
+				Client cl2 = new Client(2,"Gates","Badr", "Rue2", "75000", "Paris","0650656878");
+				resultatsCl = service.ajouterClient(cl1);
+				resultatsCl = service.ajouterClient(cl2);
+				
+				
+				//table compte
+				Map<Integer, Compte> resultatsC = new Hashtable<Integer, Compte>();
+				Compte ce = new CompteEpargne(1, 5000.00,"31/05/2018", 0.04);
+				Compte cc = new CompteCourant(2, 8000.00,"31/05/2018", 1000.00);
+				Compte cc2 = new CompteCourant(3, 15000.00,"31/05/2018", 1000.00);
+				Compte ce2 = new CompteEpargne(4, 1000000.00,"31/05/2018", 0.06);
+				resultatsC = service.ajouterCompte(ce);
+				resultatsC = service.ajouterCompte(cc);
+				resultatsC = service.ajouterCompte(cc2);
+				resultatsC = service.ajouterCompte(ce2);
+				
+				
+				
+				//table des virements
+				Map<Integer, Virement> resultatsVi = new Hashtable<Integer, Virement>();
+				Virement vir = new Virement(1, 5000.00, "31/05/2018","Opération conseiller");
+				resultatsVi = service.creerVirement(vir);
+				
+				//attribuer les comptes aux client
+				service.attribuerCompte(cc, cl1);
+				service.attribuerCompte(ce, cl1);
+				service.attribuerCompte(cc2, cl2);
+				service.attribuerCompte(ce2, cl2);
+		
+		
 
 		// Afficher le menu
 		Scanner sc = new Scanner(System.in);
@@ -71,7 +119,8 @@ public class Lanceur {
 							} else if (choixGesionClient == 2) {
 								System.out.println("modifier un Client :");
 							} else if (choixGesionClient == 3) {
-								System.out.println("lister les Clients :");
+								System.out.println("liste des Clients : ");
+								service.listeClient(resultatsCl);
 							} else if (choixGesionClient == 4) {
 								System.out.println("supprimer un Client :");
 							} else {
@@ -105,7 +154,8 @@ public class Lanceur {
 									} else if (choixGestionCompte == 2) {
 										System.out.println("modifier un compte :");
 									} else if (choixGestionCompte == 3) {
-										System.out.println("lister les comptes :");
+										System.out.println("lister les comptes : ");
+										service.listeCompte(resultatsC);
 									} else if (choixGestionCompte == 4) {
 										System.out.println("supprimer un compte :");
 									} else {
