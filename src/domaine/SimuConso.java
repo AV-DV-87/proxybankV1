@@ -8,7 +8,7 @@ package domaine;
 public class SimuConso extends Simulation {
 
 	/**
-	 * constructeur sans paramètre
+	 * constructeur sans paramètres
 	 */
 	public SimuConso() {
 		super();

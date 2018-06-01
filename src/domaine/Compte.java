@@ -107,7 +107,7 @@ public abstract class Compte {
 	}
 
 	/**
-	 * methode to String
+	 * Méthode to String
 	 */
 	
 	//TO STRING

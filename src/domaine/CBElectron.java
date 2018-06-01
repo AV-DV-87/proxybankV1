@@ -1,7 +1,7 @@
 package domaine;
 /**
  * classe CBElectron qui Hérite de la classe mère CB
- * @author Adminl
+ * @author BadrA
  *
  */
 public class CBElectron extends CB {

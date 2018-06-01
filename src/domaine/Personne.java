@@ -4,29 +4,29 @@
 package domaine;
 
 /**
- * la classe abstraite personne c'est la classe mère de client, conseiller, gérant
+ * La classe abstraite personne, c'est la classe mère de client, conseiller, gérant
  * @author Badr
  *
  */
 public abstract class Personne {
 	/**
-	 * identifiant personne
+	 * Identifiant personne
 	 */
 	private int id;
 	/**
-	 * nom personne
+	 * Nom personne
 	 */
 	protected String nom;
 	/**
-	 * prénom personne
+	 * Prénom personne
 	 */
 	protected String prenom;
 	
 	/**
 	 * consructeur avec paramètres
-	 * @param id identifiant personne
-	 * @param nom nom personne
-	 * @param prenom prénom personne
+	 * @param id Identifiant personne
+	 * @param nom Nom personne
+	 * @param prenom Prénom personne
 	 */
 	public Personne(int id, String nom, String prenom) {
 		super();
@@ -42,9 +42,7 @@ public abstract class Personne {
 		super();
 	}
 
-	/**
-	 * getter et setter
-	 */
+	
 	/**
 	 * @return the id
 	 */
@@ -88,7 +86,7 @@ public abstract class Personne {
 	}
 
 	/**
-	 * methode toString
+	 * Méthode toString
 	 */
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()

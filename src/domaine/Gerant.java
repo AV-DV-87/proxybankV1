@@ -2,16 +2,16 @@ package domaine;
 
 public class Gerant extends Personne {
 	/**
-	 * l'Agence gérer et auditer par le gérant
+	 * L'Agence est géré et auditer par le gérant.
 	 */
 	private Agence agence;
 
 	/**
-	 * constructeur avec paramétre
-	 * @param id identifiant gerant
-	 * @param nom nom gerant
-	 * @param prenom prenom gerant
-	 * @param agence objet agence de type agence
+	 * Constructeur avec paramètres
+	 * @param id Identifiant du gérant
+	 * @param nom Nom gerant
+	 * @param prenom Prenom du  gérant
+	 * @param agence l'objet Agence de type agence
 	 */
 	
 	public Gerant(int id, String nom, String prenom, Agence agence) {

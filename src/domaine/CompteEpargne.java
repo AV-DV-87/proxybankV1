@@ -1,7 +1,7 @@
 package domaine;
 
 /**
- * Classe CompteEpargne qui est Compte ayant un taux de rémunération.
+ * Classe CompteEpargne est un Compte ayant un taux de rémunération.
  * 
  * @author Badr
  *
@@ -23,9 +23,11 @@ public class CompteEpargne extends Compte {
 	}
 
 	/**
-	 * Cosntructeur tous attributs.
-	 * 
-	 * @param taux Taux d'intérêt définis par défaut .
+	 * Constructeur avec tous les attributs
+	 * @param id Identifiant du compte
+	 * @param solde Solde du compte
+	 * @param dateOuverture Date d'ouverture du compte
+	 * @param taux Taux d'intérêt d'épargne
 	 */
 	public CompteEpargne(int id, double solde, String dateOuverture, double taux) {
 		super(id, solde, dateOuverture);
@@ -33,9 +35,7 @@ public class CompteEpargne extends Compte {
 	}
 
 	// GETTER AND SETTER
-	/**
-	 * getter et setter
-	 */
+	
 	/**
 	 * @return the taux
 	 */
@@ -53,7 +53,7 @@ public class CompteEpargne extends Compte {
 
 	// TO STRING
 	/**
-	 * methode to string
+	 *Méthode to string
 	 */
 	/*
 	 * (non-Javadoc)

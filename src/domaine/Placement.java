@@ -34,8 +34,8 @@ public class Placement {
 	/**
 	 * @param id Identifiant du placement.
 	 * @param montant Montant du placement.
-	 * @param taux Taux d'interet du placement.
-	 * @param duree Duree en mois
+	 * @param taux Taux d'intérêt du placement.
+	 * @param duree Durée du placement en mois
 	 * @param bourse Choix de la place Boursière Paris, New-York et Tokyo.
 	 */
 	public Placement(int id, Double montant, Double taux, int duree, String bourse) {

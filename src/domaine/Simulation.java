@@ -1,27 +1,27 @@
 package domaine;
 
 /**
- * une classe abstraite qui permet de tester l'iligibilté à un crédit Conso ou
- * un crédit Immo
+ * Une classe abstraite qui permet de tester l'éligibilité à un crédit Conso ou
+un crédit Immo
  * 
  * @author Badr
  *
  */
 public abstract class Simulation {
 	/**
-	 * id correspond au Numero de simulation
+	 * id Numéro de simulation
 	 */
 	private int id;
 	/**
-	 * montant du pret
+	 * Montatnt du prêt
 	 */
 	protected double montant;
 	/**
-	 * duree du remboursement en Mois
+	 * Durée de remboursement en Mois
 	 */
 	protected String duree;
 	/**
-	 * taux d'intret du pret
+	 * Taux d'intérêt du prêt
 	 */
 	protected double taux;
 	/**
@@ -31,11 +31,11 @@ public abstract class Simulation {
 		super();
 	}
 	/**
-	 * constructeur avec touts les variables
-	 * @param id id correspond au Numero de simulation
-	 * @param montant montant du pret
-	 * @param date duree du remboursement en Mois
-	 * @param taux taux d'intret du pret
+	 * constructeur avec tous les attributs
+	 * @param id  Numéro de simulation
+	 * @param montant Montatnt du prêt
+	 * @param date Durée de remboursement en Mois
+	 * @param taux Taux d'intérêt du prêt
 	 */
 	public Simulation(int id, double montant, String date, double taux) {
 		super();
@@ -94,7 +94,7 @@ public abstract class Simulation {
 	}
 	
 	/**
-	 * Methode to string 
+	 * Méthode to string 
 	 */
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()

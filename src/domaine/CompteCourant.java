@@ -53,7 +53,7 @@ public class CompteCourant extends Compte {
 	}
 
 	/**
-	 * methode to string
+	 * Méthode to string
 	 */
 	//TO STRING
 	/* (non-Javadoc)
