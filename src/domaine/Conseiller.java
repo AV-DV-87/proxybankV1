@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class Conseiller extends Personne {
-	private Collection<Client> ListClient= new ArrayList();
+	/**
+	 * liste des clients gérer par un conseiller
+	 */
+	private Collection<Client> ListClient = new ArrayList();
 
 	/**
-	 * Constructeur avec  paramètre
+	 * Constructeur avec paramètre
+	 * 
 	 * @param id
 	 * @param nom
 	 * @param prenom
@@ -20,6 +24,7 @@ public class Conseiller extends Personne {
 
 	/**
 	 * getter
+	 * 
 	 * @return the listClient
 	 */
 	public Collection<Client> getListClient() {
@@ -28,21 +33,25 @@ public class Conseiller extends Personne {
 
 	/**
 	 * setter
-	 * @param listClient the listClient to set
+	 * 
+	 * @param listClient
+	 *            the listClient to set
 	 */
 	public void setListClient(Collection<Client> listClient) {
 		ListClient = listClient;
 	}
 
-	/* (non-Javadoc)
+	/**
+	 * Methode to string
+	 */
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
 		return "Conseiller [nom=" + super.getNom() + ", prenom=" + super.getPrenom() + "]";
 	}
-	
-	
-	
 
 }

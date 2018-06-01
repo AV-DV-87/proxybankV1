@@ -1,7 +1,9 @@
 package domaine;
 
 public class Gerant extends Personne {
-	
+	/**
+	 * l'Agence gérer et auditer par le gérant
+	 */
 	private Agence agence;
 
 	/**

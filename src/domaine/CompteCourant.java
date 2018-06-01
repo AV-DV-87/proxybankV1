@@ -48,6 +48,9 @@ public class CompteCourant extends Compte {
 		this.decouvert = decouvert;
 	}
 
+	/**
+	 * methode to string
+	 */
 	//TO STRING
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
