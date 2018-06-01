@@ -8,6 +8,7 @@ import domaine.CB;
 import domaine.Client;
 import domaine.Compte;
 import domaine.Personne;
+import domaine.Placement;
 import domaine.Virement;
 
 public class ServiceImpl implements Iservice {
@@ -74,6 +75,8 @@ public class ServiceImpl implements Iservice {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	//-----------------------------CLIENTS-----------------------------
 
 	@Override
 	public void afficherClient(Client c) {
@@ -91,6 +94,37 @@ public class ServiceImpl implements Iservice {
 	public void atttribuerCB(CB cb, Client c) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	@Override
+	public Map<Integer, Client> ajouterClient(Client cl) {
+		clients.put(cl.getId(), cl);
+		return clients;
+	}
+
+	@Override
+	public void modifierClient(Client p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void supprimerClient(Client p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void listeClient(Map<Integer, Client> clients) {
+		for (Map.Entry<Integer, Client> entry : clients.entrySet()) {
+			 System.out.println(entry);
+			 if(entry.getValue().getListCompte()!=null)
+			 {
+				 for (Compte compte : entry.getValue().getListCompte()) {
+					System.out.println(compte);
+				}
+			 }
+		 }
 	}
 	
 	//-----------------------------COMPTES-----------------------------
@@ -156,30 +190,22 @@ public class ServiceImpl implements Iservice {
 	}
 
 	@Override
-	public Map<Integer, Client> ajouterClient(Client p) {
+	public Map<Integer, Placement> ajouterPlacement(Placement p) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void modifierClient(Client p) {
+	public void supprimerPlacement(Placement p) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void supprimerClient(Client p) {
+	public void executerPlacement(Compte c, Placement p) {
 		// TODO Auto-generated method stub
 		
 	}
-
-	@Override
-	public void listeClient(Map<Integer, Client> clients) {
-		// TODO Auto-generated method stub
-		
-	}
-		
-
 	
 	
 }
