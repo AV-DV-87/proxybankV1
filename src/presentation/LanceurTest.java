@@ -14,6 +14,11 @@ import domaine.Virement;
 import service.Iservice;
 import service.ServiceImpl;
 
+/**
+ * Cette classe de developpement pour permettre des tests d'affichage avant intégration définitive.
+ * @author Adminl
+ *
+ */
 public class LanceurTest {
 	public static void main(String[] args) {
 		
@@ -66,6 +71,51 @@ public class LanceurTest {
 		System.out.println("Affichage de la liste des clients une fois des comptes attribué");
 		service.listeClient(resultatsCl);
 		
+		//---------------Interface d'execution d'un placement---------------
+		
+		service.executerPlacement(ce2, pla);
+		System.out.println("-----------------------------------------------------");
+		System.out.println("Affichage de la liste des comptes et propriétaires");
+		service.listeCompte(resultatsC);
+		
+		//1-Affichage de la liste des comptes
+		Scanner scanP = new Scanner(System.in);
+		System.out.println("-----------COMPTE DISPONIBLE POUR PLACEMENT-----------");
+		service.listeCompte(resultatsC);
+		
+		//2-Choix du compte
+		System.out.println("Veuillez saisir l'id du compte à débiter");
+		int compteD = scanP.nextInt();
+		//Selection du compte à débiter
+		Compte cdebit = resultatsC.get(compteD);
+		
+		//3-Choix de l'id
+		System.out.println("Veuillez saisir l'id de ce placement :");
+		int idP = scanP.nextInt();
+		
+		//4-Choix du montant
+		System.out.println("Veuillez saisir le montant de ce placement :");
+		Double montantP = scanP.nextDouble();
+		
+		//5-Choix du taux
+		System.out.println("Veuillez saisir le taux de ce placement :");
+		Double tauxP = scanP.nextDouble();
+		
+		
+		//6-Choix de la duree
+		System.out.println("Veuillez saisir la durée en mois de ce placement :");
+		int dureeP = scanP.nextInt();
+		
+		//7-Choix de la place Boursiere
+		System.out.println("Veuillez saisir la place Boursière Paris/New-York/Tokyo :");
+		String bourse = scanP.next();
+		
+		//Création du placement
+		Placement plaE = new Placement(idP, montantP, tauxP, dureeP, bourse);
+		
+		//8-Execution du placement
+		service.executerPlacement(cdebit, plaE);
+		
 		//---------------Interface d'execution d'un virement---------------
 		
 		//1-Affichage de la liste des comptes
@@ -73,13 +123,13 @@ public class LanceurTest {
 		System.out.println("-----------LISTE DE COMPTES-----------");
 		service.listeCompte(resultatsC);
 		//2-Choix des comptes
-		System.out.println("Veuillez taper l'id du compte à débiter");
+		System.out.println("Veuillez saisir l'id du compte à débiter");
 		int debit = scan.nextInt();
 		//recupération du compte à débiter
 		Compte cdeb = resultatsC.get(debit);
 		System.out.println(resultatsC.get(debit).toString());
 		
-		System.out.println("Veuillez taper l'id du compte à créditer");
+		System.out.println("Veuillez saisir l'id du compte à créditer");
 		int credit = scan.nextInt();
 		Compte ccred = resultatsC.get(credit);
 		//recuperation compte à crediter
@@ -106,17 +156,15 @@ public class LanceurTest {
 		if(validation == 1) {
 			
 			service.executerVirement(virU, cdeb, cc);
+			//fermeture du clavier
+			scan.close();
 		}else if(validation == 0) {
 			
 		}else {
 			System.out.println("Veuillez saisir O pour valider et N pour quitter.");
 		}
 		
-		//---------------Interface d'execution d'un placement---------------
-		service.executerPlacement(ce2, pla);
-		System.out.println("-----------------------------------------------------");
-		System.out.println("Affichage de la liste des comptes et propriétaires");
-		service.listeCompte(resultatsC);		
+		
 		
 		
 	}
