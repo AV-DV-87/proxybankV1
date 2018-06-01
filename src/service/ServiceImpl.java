@@ -188,11 +188,26 @@ public class ServiceImpl implements Iservice {
 	}
 
 	@Override
+<<<<<<< HEAD
+	public void crediterCompte(Compte c, double mt) {
+		// TODO crediter gérer exceptions ou if
+		c.setSolde(c.getSolde() + mt);
+	}
+
+	@Override
+	public void debiterCompte(Compte c, double mt) {
+		// TODO debiter gérer exceptions
+		c.setSolde(c.getSolde() - mt);
+	}
+
+	
+=======
 	public Map<Integer, Virement> creerVirement(Virement v) {
 		virements.put(v.getId(), v);
 		return virements;
 		
 	}	
+>>>>>>> d700a2b708feb7e9cdc1b033a3eb2ca7ac26e94d
 	
 	
 }
