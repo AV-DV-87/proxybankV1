@@ -2,18 +2,28 @@ package domaine;
 
 /**
  * Classe qui correspond au Carte Bancaire
- * @author ArnaudV
+ * 
+ * @author Badr
  *
  */
 public class CB {
-	
-	//ATTRIBUTS
-	
+
+	// ATTRIBUTS
+	/**
+	 * id c'est le numéro de la CB
+	 */
 	private int id;
+	/**
+	 * code c'est le code de la CB compser de 4 chiffres
+	 */
 	private int code;
+
+	/**
+	 * le proprietaire de la carte est de type Client
+	 */
 	private Client proprietaire;
-	
-	//CONSTRUCTEUR
+
+	// CONSTRUCTEUR
 	/**
 	 * Constructeur par défaut
 	 */
@@ -22,9 +32,9 @@ public class CB {
 		// TODO Auto-generated constructor stub
 	}
 
-
 	/**
-	 * Constructeur tous attributs
+	 * Constructeur avec paramètres
+	 * 
 	 * @param id
 	 * @param code
 	 * @param proprietaire
@@ -36,7 +46,10 @@ public class CB {
 		this.proprietaire = proprietaire;
 	}
 
-	//GETTER AND SETTER
+	// GETTER AND SETTER
+	/**
+	 * getter et setter
+	 */
 	/**
 	 * @return the id
 	 */
@@ -44,14 +57,13 @@ public class CB {
 		return id;
 	}
 
-
 	/**
-	 * @param id the id to set
+	 * @param id
+	 *            the id to set
 	 */
 	public void setId(int id) {
 		this.id = id;
 	}
-
 
 	/**
 	 * @return the code
@@ -60,14 +72,13 @@ public class CB {
 		return code;
 	}
 
-
 	/**
-	 * @param code the code to set
+	 * @param code
+	 *            the code to set
 	 */
 	public void setCode(int code) {
 		this.code = code;
 	}
-
 
 	/**
 	 * @return the proprietaire
@@ -76,22 +87,25 @@ public class CB {
 		return proprietaire;
 	}
 
-
 	/**
-	 * @param proprietaire the proprietaire to set
+	 * @param proprietaire
+	 *            the proprietaire to set
 	 */
 	public void setProprietaire(Client proprietaire) {
 		this.proprietaire = proprietaire;
 	}
 
-
-	/* (non-Javadoc)
+	/**
+	 * methode to String
+	 */
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
 		return "CB [id=" + id + ", code=" + code + ", proprietaire=" + proprietaire + "]";
 	}
-	
-	
+
 }

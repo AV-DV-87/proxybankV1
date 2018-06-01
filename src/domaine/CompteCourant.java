@@ -10,7 +10,7 @@ public class CompteCourant extends Compte {
 	/**
 	 * Decouvert autorisé sur ce compte.
 	 */
-	private double decouvert;
+	private double decouvert = 1000;
 	
 	//CONSTRUCTEUR
 	

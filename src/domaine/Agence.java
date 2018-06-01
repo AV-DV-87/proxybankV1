@@ -5,20 +5,39 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- * cette classe corresspond a une agence
+ * cette classe corresspond a l'objet agence
  * @author badr
  *
  */
 public class Agence {
-	
+	/**
+	 * le ID correspend a l'identifiant de l'agence
+	 * 
+	 */
 	private int id;
+	
+	/**
+	 * dateCreation correspend la date de création de l'agence
+	 */
 	private String dateCreation;
+	
+	/**
+	 * gerant c'est le gérant de l'agence il fait l'audite et gére l'agence
+	 */
 	private Gerant gerant;
+	
+	/**
+	 * ListeConseiller c'est la liste des Conseillers de l'agence
+	 */
 	private Collection<Conseiller> ListConseiller= new ArrayList();
 	
 	
 	/**
 	 * constructeur avec paremètre
+	 * @param id
+	 * @param dateCreation
+	 * @param gerant
+	 * @param listConseiller
 	 */
 	public Agence(int id, String dateCreation, Gerant gerant, Collection<Conseiller> listConseiller) {
 		super();
@@ -29,7 +48,8 @@ public class Agence {
 	}
 
 	/**
-	 * constructeur sans paramètre
+	 * constructeur par défaut
+	 * 
 	 */
 	public Agence() {
 		super();

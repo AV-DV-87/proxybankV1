@@ -9,10 +9,21 @@ package domaine;
  *
  */
 public abstract class Compte {
-	
+	/**
+	 * id correspond à l'identifiant du compte
+	 */
 	private int id;
+	/**
+	 * solde correspond au Solde du compte
+	 */
 	protected double solde;
+	/**
+	 * dateOuverture correspond a la date du réation du compte
+	 */
 	protected String dateOuverture;
+	/**
+	 * proprietaire du compte de type client
+	 */
 	protected Client proprietaire;
 	
 	
@@ -40,7 +51,9 @@ public abstract class Compte {
 
 
 	//------GETTERS AND SETTERS------
-	
+	/**
+	 * getter et setter
+	 */
 	/**
 	 * @return the id
 	 */
@@ -104,7 +117,9 @@ public abstract class Compte {
 		this.proprietaire = proprietaire;
 	}
 
-	
+	/**
+	 * methode to String
+	 */
 	
 	//TO STRING
 	/* (non-Javadoc)

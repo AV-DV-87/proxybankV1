@@ -7,7 +7,7 @@ package domaine;
  */
 public class CompteEpargne extends Compte {
 	
-	private double taux;
+	private double taux = 0.03;
 
 	//CONSTRUCTEUR
 	
