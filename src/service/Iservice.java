@@ -7,6 +7,7 @@ import domaine.CB;
 import domaine.Client;
 import domaine.Compte;
 import domaine.Personne;
+import domaine.Placement;
 import domaine.Virement;
 
 /**
@@ -71,10 +72,18 @@ public interface Iservice {
 	 */
 	public void modifierCompte(Compte c);
 	public void supprimerCompte(Compte c);
+	/**
+	 * Méthode permettant d'afficher la liste de l'ensemble des comptes.
+	 * @param comptes
+	 */
 	public void listeCompte(Map<Integer, Compte> comptes);
 	public void crediterCompte(Compte c, double mt);
 	public void debiterCompte(Compte c, double mt);
 	
+	//PLACEMENT
+	public Map<Integer, Placement> ajouterPlacement(Placement p);
+	public void supprimerPlacement(Placement p);
+	public void executerPlacement(Compte c, Placement p);
 	
 	//VIREMENT
 	/**
