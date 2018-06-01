@@ -33,14 +33,14 @@ public class Client extends Personne {
 	private String tel;
 	
 	/**
-	 * constructeur avec paramètre
-	 * @param id identifiant client
-	 * @param nom nom du client
-	 * @param prenom prenom du client
-	 * @param adresse adresse du client
-	 * @param codeP code postale du client
-	 * @param ville ville du client
-	 * @param tel tel du client
+	 * constructeur avec paramètres
+	 * @param id Identifiant  du client
+	 * @param nom Nom du client
+	 * @param prenom Prenom du client
+	 * @param adresse Adresse du client
+	 * @param codeP Code postale du client
+	 * @param ville Ville du client
+	 * @param tel Téléphone du client
 	 */
 	public Client(int id, String nom, String prenom, String adresse,
 			String codeP, String ville, String tel) {
@@ -156,7 +156,7 @@ public class Client extends Personne {
 	}
 	
 	/**
-	 * methode to String
+	 * Méthode to String
 	 */
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()

@@ -5,17 +5,17 @@ import java.util.Collection;
 
 public class Conseiller extends Personne {
 	/**
-	 * liste des clients gérer par un conseiller
+	 * Liste des clients gérés par un conseiller
 	 */
 	private Collection<Client> ListClient = new ArrayList();
 
 	/**
-	 * Constructeur avec paramètre
+	 * Constructeur avec paramètres
 	 * 
-	 * @param id identifiant conseiller
-	 * @param nom nom conseiller
-	 * @param prenom prenom conseiller
-	 * @param listClient liste des client gerer par le conseiller
+	 * @param id Identifiant du conseiller
+	 * @param nom Nom du conseiller
+	 * @param prenom Prénom du conseiller
+	 * @param listClient liste des clients gérés par le conseiller
 	 */
 	public Conseiller(int id, String nom, String prenom, Collection<Client> listClient) {
 		super(id, nom, prenom);
@@ -42,7 +42,7 @@ public class Conseiller extends Personne {
 	}
 
 	/**
-	 * Methode to string
+	 * Méthode to string
 	 */
 	/*
 	 * (non-Javadoc)

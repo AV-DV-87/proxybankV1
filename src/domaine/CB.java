@@ -26,7 +26,7 @@ public abstract class CB {
 	 * Constructeur avec paramètres
 	 * 
 	 * @param id  c'est le numéro de la CB
-	 * @param code c'est le code de la CB compser de 4 chiffres
+	 * @param code C'est le code de la CB composé de 4 chiffres.
 	 * @param proprietaire le proprietaire de la carte est de type Client
 	 */
 	public CB(int id, int code, Client proprietaire) {
@@ -86,7 +86,7 @@ public abstract class CB {
 	}
 
 	/**
-	 * methode to String
+	 * Méthode to String
 	 */
 	/*
 	 * (non-Javadoc)

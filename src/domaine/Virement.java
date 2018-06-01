@@ -1,8 +1,8 @@
 package domaine;
 
 /**
- * Classe de virement compte à compte.
- * @author Arnaud
+ * La classe de virement gère les virements d'un compte à compte.
+ * @author Badr
  *
  */
 
@@ -105,6 +105,10 @@ public class Virement {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	/**
+	 * Méthode to string
+	 */
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()

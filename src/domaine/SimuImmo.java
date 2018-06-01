@@ -7,7 +7,7 @@ package domaine;
 public class SimuImmo extends Simulation {
 
 	/**
-	 * constructeur sans paramètre
+	 * constructeur sans paramètres
 	 */
 	public SimuImmo() {
 		super();
