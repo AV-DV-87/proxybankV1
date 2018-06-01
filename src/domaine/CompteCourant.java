@@ -57,7 +57,7 @@ public class CompteCourant extends Compte {
 	 */
 	@Override
 	public String toString() {
-		return "CompteCourant [id=" + super.getId() + ", solde=" + super.getSolde() + ", dateOuverture=" + super.getDateOuverture() + "decouvert=" + decouvert + "]";
+		return "CompteCourant [id=" + super.getId() + ", solde=" + super.getSolde() + ", dateOuverture=" + super.getDateOuverture() + " decouvert=" + decouvert + "]";
 	}
 	
 		

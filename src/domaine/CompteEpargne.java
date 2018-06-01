@@ -63,7 +63,7 @@ public class CompteEpargne extends Compte {
 	@Override
 	public String toString() {
 		return "CompteEpargne [id=" + super.getId() + ", solde=" + super.getSolde() + ", dateOuverture="
-				+ super.getDateOuverture() + "taux=" + taux + "]";
+				+ super.getDateOuverture() + " taux=" + taux + "]";
 	}
 
 }

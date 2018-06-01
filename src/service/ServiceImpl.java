@@ -7,7 +7,6 @@ import domaine.Agence;
 import domaine.CB;
 import domaine.Client;
 import domaine.Compte;
-import domaine.Personne;
 import domaine.Placement;
 import domaine.Virement;
 
