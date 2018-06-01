@@ -63,8 +63,14 @@ public class Lanceur {
 		resultatsPla = service.ajouterPlacement(pla);
 		
 		//table des Agences
-		Map<Integer, Agence> resultatAg = new Hashtable<Integer, Agence>();
-		Agence ag1 = new Agence(1,"20/05/2018");
+		Map<Integer, Agence> resultatsAg = new Hashtable<Integer, Agence>();
+		Agence ag1 = new Agence(1, "Paris-15", "01/06/2018");
+		Agence ag2 = new Agence(2,"Paris-16","25/06/2018");
+		Agence ag3 = new Agence(3,"Paris-17","15/06/2018");
+		resultatsAg = service.ajouterAgence(ag1);
+		resultatsAg = service.ajouterAgence(ag2);
+		resultatsAg = service.ajouterAgence(ag3);
+		service.listeAgence(resultatsAg);
 		
 		//attribuer les comptes aux client
 		service.attribuerCompte(cc, cl1);

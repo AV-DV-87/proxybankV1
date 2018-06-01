@@ -7,6 +7,7 @@ import domaine.Agence;
 import domaine.CB;
 import domaine.Client;
 import domaine.Compte;
+import domaine.Conseiller;
 import domaine.Placement;
 import domaine.Virement;
 
@@ -39,7 +40,15 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void listeAgence(Map<Integer, Agence> agences) {
-				
+		for (Map.Entry<Integer, Agence> entry : agences.entrySet()) {
+			 System.out.println(entry);
+			 if(entry.getValue().getListConseiller()!=null)
+			 {
+				 for (Conseiller conseiller : entry.getValue().getListConseiller()) {
+					System.out.println(conseiller);
+				}
+			 }
+		 }
 	}
 
 	@Override

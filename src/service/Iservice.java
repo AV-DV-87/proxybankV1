@@ -178,7 +178,7 @@ public interface Iservice {
 	//------------------------VIREMENT------------------------
 	/**
 	 * Stockage d'un virement dans une Collection.
-	 * @param Virement de type virement
+	 * @param v de type virement
 	 */
 	public Map<Integer, Virement> creerVirement(Virement v);
 	/**

@@ -36,14 +36,14 @@ public class Agence {
 	
 	/**
 	 * constructeur avec paramètre
-	 * @param  id correspend a l'identifiant de l'agence
-	 * @param  dateCreation correspend la date de création de l'agence
-	 * @param  gerant  c'est le gérant de l'agence il fait l'audite et gére l'agence
-	 * @param  listConseiller ListeConseiller c'est la liste des Conseillers de l'agence
+	 * @param id
+	 * @param nom
+	 * @param dateCreation
 	 */
-	public Agence(int id, String dateCreation) {
+	public Agence(int id, String nom, String dateCreation) {
 		super();
 		this.id = id;
+		this.nom = nom;
 		this.dateCreation = dateCreation;
 	}
 
