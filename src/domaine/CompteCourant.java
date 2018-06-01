@@ -13,6 +13,7 @@ public class CompteCourant extends Compte {
 	private double decouvert;
 	
 	//CONSTRUCTEUR
+	
 	/**
 	 * Constructeur par défaut
 	 */
@@ -26,8 +27,8 @@ public class CompteCourant extends Compte {
 	 * Constructeur avec tous les attributs
 	 * @param decouvert
 	 */
-	public CompteCourant(double decouvert) {
-		super();
+	public CompteCourant(int id, double solde, String dateOuverture, double decouvert) {
+		super(id, solde, dateOuverture);
 		this.decouvert = decouvert;
 	}
 

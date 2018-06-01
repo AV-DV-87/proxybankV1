@@ -21,18 +21,14 @@ public class Client extends Personne {
 	 * @param id
 	 * @param nom
 	 * @param prenom
-	 * @param listCompte
-	 * @param carte
 	 * @param adresse
 	 * @param codeP
 	 * @param ville
 	 * @param tel
 	 */
-	public Client(int id, String nom, String prenom, Collection<Compte> listCompte, CB carte, String adresse,
+	public Client(int id, String nom, String prenom, String adresse,
 			String codeP, String ville, String tel) {
 		super(id, nom, prenom);
-		listCompte = listCompte;
-		this.carte = carte;
 		adresse = adresse;
 		this.codeP = codeP;
 		this.ville = ville;
@@ -40,13 +36,10 @@ public class Client extends Personne {
 	}
 
 	/**
-	 * constructeur saans paramètre
-	 * @param id
-	 * @param nom
-	 * @param prenom
+	 * constructeur par défaut
 	 */
-	public Client(int id, String nom, String prenom) {
-		super(id, nom, prenom);
+	public Client() {
+		super();
 	}
 
 	/**
@@ -151,8 +144,8 @@ public class Client extends Personne {
 	 */
 	@Override
 	public String toString() {
-		return "Client [listCompte=" + listCompte + ", adresse=" + adresse + ", codeP=" + codeP + ", ville=" + ville
-				+ ", tel=" + tel + "]";
+		return "Client [nom=" + nom + "prenom=" + prenom + ", adresse=" + adresse + ", codeP=" + codeP + ", ville=" + ville
+				+ ", tel=" + tel +"]";
 	}
 
 	
