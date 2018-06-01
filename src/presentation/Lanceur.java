@@ -137,7 +137,6 @@ public class Lanceur {
 					else if (choixOptionConseiller == 2) {
 						// 2eme SOUS MENU GESTION CLIENT
 						System.out.println("-------------------------- Gestion Compte-----------------------------");
-						
 						System.out.println("TAPER 1 pour modifer un compte ");
 						System.out.println("TAPER 2 pour lister les comptes ");
 						System.out.println("TAPER 3 pour supprimer un compte");
@@ -180,29 +179,52 @@ public class Lanceur {
 									// 3eme SOUS MENU VIRMENT
 									if (choixGestionCompte == 1) {
 
-										System.out.println("choisir un client :");
-										int choisirUnClient = sc.nextInt();
-
-										System.out.println("choisir le compte a debité :");
-										String CompteDebiter = sc.nextLine();
-
-										System.out.println("choisir le compte à Créditer :");
-										String CompteCrediter = sc.nextLine();
-
-										System.out.println("choisir saisir l'ID :");
-										int id = sc.nextInt();
-
-										System.out.println("saisir le montant :");
-										double sMontant = sc.nextDouble();
-
-										System.out.println("saisir la date :");
-										String sDate = sc.nextLine();
-
-										System.out.println("saisir une discription :");
-										String sdiscreption = sc.nextLine();
-
-										System.out.println("Êtes vous sur d'exécuter ce virement :");
-										String Sconfirm = sc.nextLine();
+										//---------------Interface d'execution d'un virement---------------
+										
+										//1-Affichage de la liste des comptes
+										Scanner scan = new Scanner(System.in);
+										System.out.println("-----------LISTE DE COMPTES-----------");
+										service.listeCompte(resultatsC);
+										
+										//2-Choix des comptes
+										System.out.println("Veuillez taper l'id du compte à débiter");
+										int debit = scan.nextInt();
+										//recupération du compte à débiter
+										Compte cdeb = resultatsC.get(debit);
+										System.out.println(resultatsC.get(debit).toString());
+										
+										System.out.println("Veuillez taper l'id du compte à créditer");
+										int credit = scan.nextInt();
+										Compte ccred = resultatsC.get(credit);
+										//recuperation compte à crediter
+										System.out.println(resultatsC.get(credit).toString());
+										
+										System.out.println("Veuillez saisir un identifiant pour ce virement :");
+										int id = scan.nextInt();
+										
+										System.out.println("Veuillez saisir un montant pour ce virement :");
+										double montant = scan.nextDouble();
+										
+										System.out.println("Veuillez saisir une date (jj/mm/aaaa) pour ce virement :");
+										String date = scan.next();
+										
+										System.out.println("Veuillez saisir une description pour ce virement :");
+										String description = scan.next();
+										
+										//creation du virement
+										Virement virU = new Virement(id,montant, date, description);
+										resultatsVi = service.creerVirement(virU);
+										
+										System.out.println("Voulez-vous valider ce virement : 1 pour valider 0 pour annuler.");
+										int validation = scan.nextInt();
+										if(validation == 1) {
+											
+											service.executerVirement(virU, cdeb, cc);
+										}else if(validation == 0) {
+											
+										}else {
+											System.out.println("Veuillez saisir O pour valider et N pour quitter.");
+										}
 
 									}
 									System.out.println("-------------------------- Virement-----------------------------");

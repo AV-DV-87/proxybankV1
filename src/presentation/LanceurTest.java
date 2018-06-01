@@ -72,7 +72,7 @@ public class LanceurTest {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("-----------LISTE DE COMPTES-----------");
 		service.listeCompte(resultatsC);
-		
+		//2-Choix des comptes
 		System.out.println("Veuillez taper l'id du compte à débiter");
 		int debit = scan.nextInt();
 		//recupération du compte à débiter
