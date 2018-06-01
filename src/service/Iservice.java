@@ -18,33 +18,57 @@ import domaine.Virement;
  */
 public interface Iservice {
 	
-	//AGENCE
+	//------------------------AGENCE------------------------
+	/**
+	 * Permet d'afficher la liste de toutes les agences déjà enregistrée.
+	 * @param Agence a
+	 * @return Map<Integer, Agence>
+	 */
 	public Map<Integer, Agence> ajouterAgence(Agence a);
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
-	 * @param Agence
+	 * @param  a Agence
 	 */
 	public void modifierAgence(Agence a);
 	public void supprimerAgence(Agence a);
+	
 	public void listeAgence(Map<Integer, Agence> agences);
+	
 	public void afficherClient(Client c);
 	
-	//AUDITEUR
+	
+	//------------------------GERANT------------------------
 	public Map<Integer, Compte> afficherComptesDebiteurs(Agence a);
 	
-	//CB
-	public Map<Integer, CB> ajouterCB(CB cb);
+	
+	//------------------------CB------------------------
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
 	 * @param Agence
 	 */
+	public Map<Integer, CB> ajouterCB(CB cb);
+	/**
+	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
+	 * @author Arnaud
+	 * @param cb
+	 */
 	public void modifierCB(CB cb);
+	/**
+	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
+	 * @author Arnaud
+	 * @param Agence
+	 */
 	public void supprimerCB(CB cb);
+	/**
+	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
+	 * @author Arnaud
+	 * @param Agence
+	 */
 	public void listeCB(Map<Integer, Map> CBlist);
 	
-	//CLIENT
+	//------------------------CLIENT------------------------
 	public Map<Integer, Client> ajouterClient(Client p);
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
@@ -61,9 +85,14 @@ public interface Iservice {
 	 * @param Client
 	 */
 	public void attribuerCompte(Compte c, Client cl);
+	/**
+	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
+	 * @author Arnaud
+	 * @param Agence
+	 */
 	public void atttribuerCB(CB cb, Client c);
 	
-	//COMPTE
+	//------------------------COMPTE------------------------
 	public Map<Integer, Compte> ajouterCompte(Compte c);
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
@@ -71,6 +100,11 @@ public interface Iservice {
 	 * @param Agence
 	 */
 	public void modifierCompte(Compte c);
+	/**
+	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
+	 * @author Arnaud
+	 * @param Agence
+	 */
 	public void supprimerCompte(Compte c);
 	/**
 	 * Méthode permettant d'afficher la liste de l'ensemble des comptes.
@@ -80,12 +114,28 @@ public interface Iservice {
 	public void crediterCompte(Compte c, double mt);
 	public void debiterCompte(Compte c, double mt);
 	
-	//PLACEMENT
+	//------------------------PLACEMENT------------------------
+	/**
+	 * Stockage d'un placement dans une collection.
+	 * @param Placement p
+	 * @return Map<Integer, PLacement>
+	 */
 	public Map<Integer, Placement> ajouterPlacement(Placement p);
+	/**
+	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
+	 * @author Arnaud
+	 * @param Agence
+	 */
 	public void supprimerPlacement(Placement p);
+	/**
+	 * Méthode permettant d'effectuer un placement à partir d'un compte.
+	 * @param Compte c
+	 * @param Placement p
+	 */
 	public void executerPlacement(Compte c, Placement p);
 	
-	//VIREMENT
+	
+	//------------------------VIREMENT------------------------
 	/**
 	 * Stockage d'un virement dans une Collection.
 	 * @param Virement

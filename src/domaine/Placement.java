@@ -4,26 +4,44 @@
 package domaine;
 
 /**
+ * Classement permettant au conseiller de créer des placements.
  * @author Arnaud
  *
  */
 public class Placement {
+	/**
+	 * Identifiant du placement.
+	 */
 	private int id;
+	/**
+	 * Montant du placement.
+	 */
+	private Double montant;
+	/**
+	 * Taux de rémunération du placement.
+	 */
 	private Double taux;
-	private String duree;
+	/**
+	 * Duree en mois
+	 */
+	private int duree;
+	/**
+	 * Choix de la place Boursière Paris, New-York et Tokyo.
+	 */
 	private String bourse;
 	
 	
 	/**
-	 * Constructeur all fields.
 	 * @param id
+	 * @param montant
 	 * @param taux
 	 * @param duree
 	 * @param bourse
 	 */
-	public Placement(int id, Double taux, String duree, String bourse) {
+	public Placement(int id, Double montant, Double taux, int duree, String bourse) {
 		super();
 		this.id = id;
+		this.montant = montant;
 		this.taux = taux;
 		this.duree = duree;
 		this.bourse = bourse;
@@ -74,7 +92,7 @@ public class Placement {
 	/**
 	 * @return the duree
 	 */
-	public String getDuree() {
+	public int getDuree() {
 		return duree;
 	}
 
@@ -82,7 +100,7 @@ public class Placement {
 	/**
 	 * @param duree the duree to set
 	 */
-	public void setDuree(String duree) {
+	public void setDuree(int duree) {
 		this.duree = duree;
 	}
 
@@ -101,16 +119,33 @@ public class Placement {
 	public void setBourse(String bourse) {
 		this.bourse = bourse;
 	}
+	
+
+	/**
+	 * @return the montant
+	 */
+	public Double getMontant() {
+		return montant;
+	}
+
+
+	/**
+	 * @param montant the montant to set
+	 */
+	public void setMontant(Double montant) {
+		this.montant = montant;
+	}
+
 
 	//TO STRING
-	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "Placement [id=" + id + ", taux=" + taux + ", duree=" + duree + ", bourse=" + bourse + "]";
+		return "Placement [id=" + id + ", montant=" + montant + ", taux=" + taux + ", duree=" + duree + ", bourse="
+				+ bourse + "]";
 	}
-	
+
 	
 }
