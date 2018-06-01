@@ -17,12 +17,14 @@ import service.ServiceImpl;
  * la classe lanceur permet d'echanger avec l'utilisateur
  * 
  * @author Badr
+ * @version 1.0
  *
  */
 public class Lanceur {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		
 		//---------------DECLARATION INSTANCIATION SERVICE---------------
 		Iservice service = new ServiceImpl();
 		
@@ -67,11 +69,11 @@ public class Lanceur {
 		
 		
 
-		// Afficher le menu
+		// MENU PRINCIPAL
 		Scanner sc = new Scanner(System.in);
 		System.out.println("---------------------------MENU---------------------------------------");
-		System.out.println("TAPER 1 si vous étes Gérant:");
-		System.out.println("TAPER 2 si vous étes Conseiller:");
+		System.out.println("TAPER 1 si vous êtes Gérant:");
+		System.out.println("TAPER 2 si vous êtes Conseiller:");
 		System.out.println("TAPER 0 pour quitter");
 
 		int choix = sc.nextInt();
@@ -80,12 +82,12 @@ public class Lanceur {
 			if (choix == 1) {
 				// SOUS MENU GERANT
 				System.out.println("-------------------------- Gérant-----------------------------");
-				System.out.println("TAPER 1 pour Afficher agences / auditer une agence ");
+				System.out.println("TAPER 1 pour Afficher agences / Auditer une agence ");
 				System.out.println("TAPER 0 pour quitter");
 				int choix2 = sc.nextInt();
 				while (choix2 != 0) {
 					if (choix2 == 1) {
-						System.out.println("liste des agences et choix d'une agence");
+						System.out.println("Liste des agences et choix d'une agence");
 						int choix3 = sc.nextInt();
 					} else {
 						System.out.println("MAUVAIS CHOIX, TAPER 0 pour quitter");
@@ -115,7 +117,6 @@ public class Lanceur {
 						
 						System.out.println("TAPER 1 pour modifer un client ");
 						System.out.println("TAPER 2 pour lister les clients ");
-						System.out.println("TAPER 3 pour supprimer un client ");
 						System.out.println("TAPER 0 pour quitter ");
 						int choixGesionClient = sc.nextInt();
 						while (choixGesionClient != 0) {
@@ -125,8 +126,6 @@ public class Lanceur {
 							} else if (choixGesionClient == 2) {
 								System.out.println("liste des Clients : ");
 								service.listeClient(resultatsCl);
-							} else if (choixGesionClient == 3) {
-								System.out.println("supprimer un Client :");
 							} else {
 								System.out.println("MAUVAIS CHOIX, MERCI DE RESAISSIR OU Tapez 0 pour quitter");
 							}
@@ -143,9 +142,7 @@ public class Lanceur {
 					else if (choixOptionConseiller == 2) {
 						// 2eme SOUS MENU GESTION CLIENT
 						System.out.println("-------------------------- Gestion Compte-----------------------------");
-						System.out.println("TAPER 1 pour modifer un compte ");
-						System.out.println("TAPER 2 pour lister les comptes ");
-						System.out.println("TAPER 3 pour supprimer un compte");
+						System.out.println("TAPER 1 pour lister les comptes ");
 						System.out.println("TAPER 0 pour quitter");
 						int choixGestionCompte = sc.nextInt();
 						while (choixGestionCompte != 0) {
@@ -153,12 +150,8 @@ public class Lanceur {
 								while (choixGestionCompte != 0) {
 									// sous sous sous menu gestion compte
 									if (choixGestionCompte == 1) {
-										System.out.println("modifier un compte :");
-									} else if (choixGestionCompte == 2) {
 										System.out.println("lister les comptes : ");
 										service.listeCompte(resultatsC);
-									} else if (choixGestionCompte == 3) {
-										System.out.println("supprimer un compte :");
 									} else {
 										System.out.println("MAUVAIS CHOIX, MERCI DE RESAISSIR OU Tapez 0 pour quitter");
 									}
@@ -241,7 +234,7 @@ public class Lanceur {
 							}
 						}
 
-					} // END 2eme SOUS MENU VIRMENT
+					} // END 2eme SOUS MENU VIREMENT
 					
 					else if (choixOptionConseiller == 4) {
 						// 2em SOUS MENU PLACEMENT
@@ -252,7 +245,7 @@ public class Lanceur {
 						while (choixGestionCompte != 0) {
 							if (choixGestionCompte == 1) {
 								while (choixGestionCompte != 0) {
-									// 3em SOUS MENU PLECMENT
+									// INTERFACE PLACEMENT
 									if (choixGestionCompte == 1) {
 
 										//---------------Interface d'execution d'un placement---------------
@@ -305,7 +298,7 @@ public class Lanceur {
 									System.out.println("TAPER 1 pour effectuer un Placment ");
 									System.out.println("TAPER 0 pour quitter");
 									choixGestionCompte = sc.nextInt();
-								} // END 3eme SOUS MENU PLACEMENT
+								} // END INTERFACE PLACEMENT
 							}
 						}
 
@@ -318,8 +311,8 @@ public class Lanceur {
 					System.out.println("-------------------------- Conseiller-----------------------------");
 					System.out.println("TAPER 1 pour gérer des clients ");
 					System.out.println("TAPER 2 pour gérer des comptes ");
-					System.out.println("TAPER 3 pour effecteur un virement ");
-					System.out.println("TAPER 4 pour efecteur un placement ");
+					System.out.println("TAPER 3 pour effectuer un virement ");
+					System.out.println("TAPER 4 pour effectuer un placement ");
 					System.out.println("TAPER 0 pour quitter");
 					choixOptionConseiller = sc.nextInt();
 				} // END SOUS MENU CONSEILLER
