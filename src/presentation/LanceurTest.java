@@ -83,7 +83,10 @@ public class LanceurTest {
 		
 		System.out.println("Veuillez taper l'id du compte à créditer");
 		int credit = scan.nextInt();
-		resultatsC.get(credit);
+		
+		System.out.println("Veuillez saisir un identifiant pour ce virement :");
+		int id = scan.nextInt();
+		
 		
 		
 		
