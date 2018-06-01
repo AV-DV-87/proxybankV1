@@ -10,34 +10,19 @@ import java.util.Collection;
  *
  */
 public class Agence {
-	/**
-	 * le ID correspend a l'identifiant de l'agence
-	 * 
-	 */
+	
 	private int id;
-	
-	/**
-	 * dateCreation correspend la date de création de l'agence
-	 */
 	private String dateCreation;
-	
-	/**
-	 * gerant c'est le gérant de l'agence il fait l'audite et gére l'agence
-	 */
 	private Gerant gerant;
-	
-	/**
-	 * ListeConseiller c'est la liste des Conseillers de l'agence
-	 */
 	private Collection<Conseiller> ListConseiller= new ArrayList();
 	
 	
 	/**
 	 * constructeur avec paremètre
-	 * @param id
-	 * @param dateCreation
-	 * @param gerant
-	 * @param listConseiller
+	 * @param  id le ID correspend a l'identifiant de l'agence
+	 * @param  dateCreation dateCreation correspend la date de création de l'agence
+	 * @param  gerant gerant c'est le gérant de l'agence il fait l'audite et gére l'agence
+	 * @param  listConseiller ListeConseiller c'est la liste des Conseillers de l'agence
 	 */
 	public Agence(int id, String dateCreation, Gerant gerant, Collection<Conseiller> listConseiller) {
 		super();
@@ -49,7 +34,6 @@ public class Agence {
 
 	/**
 	 * constructeur par défaut
-	 * 
 	 */
 	public Agence() {
 		super();
@@ -59,56 +43,56 @@ public class Agence {
 	 * getter et setter
 	 */
 	/**
-	 * @return the id
+	 * @return the id getter id
 	 */
 	public int getId() {
 		return id;
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param id the id to set setter id
 	 */
 	public void setId(int id) {
 		this.id = id;
 	}
 
 	/**
-	 * @return the dateCreation
+	 * @return the dateCreation getter dateCreation
 	 */
 	public String getDateCreation() {
 		return dateCreation;
 	}
 
 	/**
-	 * @param dateCreation the dateCreation to set
+	 * @param dateCreation the dateCreation to set setter
 	 */
 	public void setDateCreation(String dateCreation) {
 		this.dateCreation = dateCreation;
 	}
 
 	/**
-	 * @return the gerant
+	 * @return the gerant getter
 	 */
 	public Gerant getGerant() {
 		return gerant;
 	}
 
 	/**
-	 * @param gerant the gerant to set
+	 * @param gerant the gerant to set setter
 	 */
 	public void setGerant(Gerant gerant) {
 		this.gerant = gerant;
 	}
 
 	/**
-	 * @return the listConseiller
+	 * @return the listConseiller liste conseiller
 	 */
 	public Collection<Conseiller> getListConseiller() {
 		return ListConseiller;
 	}
 
 	/**
-	 * @param listConseiller the listConseiller to set
+	 * @param listConseiller the listConseiller to set setter
 	 */
 	public void setListConseiller(Collection<Conseiller> listConseiller) {
 		ListConseiller = listConseiller;
