@@ -8,6 +8,7 @@ import domaine.Compte;
 import domaine.CompteCourant;
 import domaine.CompteEpargne;
 import domaine.Personne;
+import domaine.Placement;
 import domaine.Virement;
 import service.Iservice;
 import service.ServiceImpl;
@@ -47,6 +48,11 @@ public class LanceurTest {
 		Virement vir = new Virement(1, 5000.00, "31/05/2018","Opération conseiller");
 		resultatsVi = service.creerVirement(vir);
 		
+		//table des placements
+		Map<Integer, Placement> resultatsPla = new Hashtable<Integer, Placement>();
+		Placement pla = new Placement(1, 50000.00, 0.08, 24,"Paris");
+		resultatsPla = service.ajouterPlacement(pla);
+		
 		//attribuer les comptes aux client
 		service.attribuerCompte(cc, cl1);
 		service.attribuerCompte(ce, cl1);
@@ -65,6 +71,11 @@ public class LanceurTest {
 		System.out.println("Affichage de la liste des comptes et propriétaires");
 		service.listeCompte(resultatsC);
 		
+		//Procéder à un placement
+		service.executerPlacement(ce2, pla);
+		System.out.println("-----------------------------------------------------");
+		System.out.println("Affichage de la liste des comptes et propriétaires");
+		service.listeCompte(resultatsC);		
 		
 		
 	}

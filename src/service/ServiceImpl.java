@@ -19,6 +19,7 @@ public class ServiceImpl implements Iservice {
 	private Map<Integer,Agence> agences = new Hashtable<Integer,Agence>();
 	private  Map<Integer, CB> CBlist = new Hashtable<Integer,CB>();
 	private Map<Integer, Virement> virements = new Hashtable<Integer, Virement>();
+	private Map<Integer, Placement> placements = new Hashtable<Integer, Placement>();
 	
 	//-----------------------------AGENCES-----------------------------
 	@Override
@@ -29,20 +30,17 @@ public class ServiceImpl implements Iservice {
 	
 	@Override
 	public void modifierAgence(Agence a) {
-		
-		
+		//TODO A implémenter en V2
 	}
 
 	@Override
 	public void supprimerAgence(Agence a) {
-		// TODO Auto-generated method stub
-		
+		//TODO A implémenter en V2		
 	}
 
 	@Override
 	public void listeAgence(Map<Integer, Agence> agences) {
-		// TODO Auto-generated method stub
-		
+				
 	}
 
 	@Override
@@ -191,8 +189,8 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public Map<Integer, Placement> ajouterPlacement(Placement p) {
-		// TODO Auto-generated method stub
-		return null;
+		placements.put(p.getId(), p);
+		return placements;
 	}
 
 	@Override
@@ -203,8 +201,8 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void executerPlacement(Compte c, Placement p) {
-		// TODO Auto-generated method stub
-		
+		debiterCompte(c, p.getMontant());
+		System.out.println("Un placement à hauteur de " + p.getMontant() + " a été effectué sur la Bourse de " +p.getBourse()+" pour une durée minimale de "+p.getDuree()+" mois.");
 	}
 	
 	
