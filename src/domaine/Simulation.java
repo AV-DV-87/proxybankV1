@@ -74,8 +74,8 @@ public abstract class Simulation {
 	public String getDuree() {
 		return duree;
 	}
-	/**
-	 * @param date the date to set
+	/** 
+	 * @param duree the dree to set
 	 */
 	public void setDuree(String duree) {
 		this.duree = duree;
