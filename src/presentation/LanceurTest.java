@@ -66,8 +66,9 @@ public class LanceurTest {
 		System.out.println("Affichage de la liste des clients une fois des comptes attribué");
 		service.listeClient(resultatsCl);
 		
-		//Execution d'un virement 
+		//---------------Interface d'execution d'un virement---------------
 		
+		//1-Affichage de la liste des comptes
 		Scanner scan = new Scanner(System.in);
 		System.out.println("-----------LISTE DE COMPTES-----------");
 		service.listeCompte(resultatsC);
@@ -111,7 +112,7 @@ public class LanceurTest {
 			System.out.println("Veuillez saisir O pour valider et N pour quitter.");
 		}
 		
-		//Procéder à un placement
+		//---------------Interface d'execution d'un placement---------------
 		service.executerPlacement(ce2, pla);
 		System.out.println("-----------------------------------------------------");
 		System.out.println("Affichage de la liste des comptes et propriétaires");
