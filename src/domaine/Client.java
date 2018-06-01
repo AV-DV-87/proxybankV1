@@ -9,11 +9,29 @@ import java.util.Collection;
  *
  */
 public class Client extends Personne {
+	/**
+	 * ListeCompte c'est la liste des Comptes des dans le client est propriétaire
+	 */
 	private Collection<Compte> listCompte= new ArrayList();
+	/**
+	 * catre bancaire ratacher au compte de type CB
+	 */
 	private CB carte;
+	/**
+	 * adresse du client
+	 */
 	private String adresse;
+	/**
+	 * code postale du client
+	 */
 	private String codeP;
+	/**
+	 * ville du client
+	 */
 	private String ville;
+	/**
+	 * tel du client
+	 */
 	private String tel;
 	
 	/**
@@ -139,6 +157,9 @@ public class Client extends Personne {
 		this.tel = tel;
 	}
 	
+	/**
+	 * methode to String
+	 */
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
@@ -148,8 +169,4 @@ public class Client extends Personne {
 				+ ", tel=" + tel +"]";
 	}
 
-	
-	
-	
-	
 }

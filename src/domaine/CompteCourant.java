@@ -10,7 +10,7 @@ public class CompteCourant extends Compte {
 	/**
 	 * Decouvert autorisé sur ce compte.
 	 */
-	private double decouvert;
+	private double decouvert = 1000;
 	
 	//CONSTRUCTEUR
 	
@@ -48,6 +48,9 @@ public class CompteCourant extends Compte {
 		this.decouvert = decouvert;
 	}
 
+	/**
+	 * methode to string
+	 */
 	//TO STRING
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()

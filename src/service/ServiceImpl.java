@@ -17,7 +17,7 @@ public class ServiceImpl implements Iservice {
 	private Map<Integer,Client> clients = new Hashtable<Integer,Client>();
     private Map<Integer,Compte> comptes = new Hashtable<Integer,Compte>();
 	private Map<Integer,Agence> agences = new Hashtable<Integer,Agence>();
-	private  Map<Integer, CB> CBlist = new Hashtable<Integer,CB>();
+	private Map<Integer, CB> CBlist = new Hashtable<Integer,CB>();
 	private Map<Integer, Virement> virements = new Hashtable<Integer, Virement>();
 	private Map<Integer, Placement> placements = new Hashtable<Integer, Placement>();
 	

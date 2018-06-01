@@ -4,12 +4,22 @@
 package domaine;
 
 /**
- * @author Adminl
+ * la classe abstraite personne c'est la classe mère de client, conseiller, gérant
+ * @author Badr
  *
  */
 public abstract class Personne {
+	/**
+	 * identifiant personne
+	 */
 	private int id;
+	/**
+	 * nom personne
+	 */
 	protected String nom;
+	/**
+	 * prénom personne
+	 */
 	protected String prenom;
 	
 	/**
