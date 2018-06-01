@@ -201,7 +201,9 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void executerPlacement(Compte c, Placement p) {
+		//1.debite le compte du montant du placement à effectuer
 		debiterCompte(c, p.getMontant());
+		//affiche un message de confirmation
 		System.out.println("Un placement à hauteur de " + p.getMontant() + " a été effectué sur la Bourse de " +p.getBourse()+" pour une durée minimale de "+p.getDuree()+" mois.");
 	}
 	
