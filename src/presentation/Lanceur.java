@@ -70,7 +70,7 @@ public class Lanceur {
 		resultatsAg = service.ajouterAgence(ag1);
 		resultatsAg = service.ajouterAgence(ag2);
 		resultatsAg = service.ajouterAgence(ag3);
-		service.listeAgence(resultatsAg);
+		//service.listeAgence(resultatsAg);
 		
 		//attribuer les comptes aux client
 		service.attribuerCompte(cc, cl1);
@@ -93,13 +93,13 @@ public class Lanceur {
 			if (choix == 1) {
 				// SOUS MENU GERANT
 				System.out.println("-------------------------- Gérant-----------------------------");
-				System.out.println("TAPER 1 pour Afficher agences / Auditer une agence ");
+				System.out.println("TAPER 1 pour Afficher les agences");
 				System.out.println("TAPER 0 pour quitter");
 				int choix2 = sc.nextInt();
 				while (choix2 != 0) {
 					if (choix2 == 1) {
 						System.out.println("Liste des agences et choix d'une agence");
-						int choix3 = sc.nextInt();
+						System.out.println("Fonctionnalité en cours de production");
 					} else {
 						System.out.println("MAUVAIS CHOIX, TAPER 0 pour quitter");
 						choix2 = sc.nextInt();
@@ -134,6 +134,7 @@ public class Lanceur {
 							if (choixGesionClient == 1) {
 								// 3eme SOUS MENU GESTION CLIENT
 								System.out.println("modifier un Client :");
+								System.out.println("Fonctionnalité en cours de production");
 							} else if (choixGesionClient == 2) {
 								System.out.println("liste des Clients : ");
 								service.listeClient(resultatsCl);
@@ -141,10 +142,8 @@ public class Lanceur {
 								System.out.println("MAUVAIS CHOIX, MERCI DE RESAISSIR OU Tapez 0 pour quitter");
 							}
 							System.out.println("-------------------------- Gestion Client-----------------------------");
-							
 							System.out.println("TAPER 1 pour modifer un client ");
 							System.out.println("TAPER 2 pour lister les clients ");
-							System.out.println("TAPER 3 pour supprimer un client ");
 							System.out.println("TAPER 0 pour quitter ");
 							choixGesionClient = sc.nextInt();
 						} // END 3eme SOUS MENU GESTION CLIENT
@@ -167,9 +166,7 @@ public class Lanceur {
 										System.out.println("MAUVAIS CHOIX, MERCI DE RESAISSIR OU Tapez 0 pour quitter");
 									}
 									System.out.println("-------------------------- Gestion Compte-----------------------------");
-									System.out.println("TAPER 1 pour modifer un compte ");
-									System.out.println("TAPER 2 pour lister les comptes ");
-									System.out.println("TAPER 3 pour supprimer un compte");
+									System.out.println("TAPER 1 pour lister les comptes ");
 									System.out.println("TAPER 0 pour quitter");
 									choixGestionCompte = sc.nextInt();
 								}

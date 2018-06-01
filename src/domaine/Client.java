@@ -9,18 +9,20 @@ import java.util.Collection;
  *
  */
 public class Client extends Personne {
-
+	/**
+	 * Liste des comptes dont la personne est titulaire
+	 */
 	private Collection<Compte> listCompte= new ArrayList();
 	/**
-	 * 
+	 * La carte dont la personne est titulaire
 	 */
 	private CB carte;
 	/**
-	 * 
+	 * L'adresse de la personne
 	 */
 	private String adresse;
 	/**
-	 * 
+	 * Le code postal du client.
 	 */
 	private String codeP;
 	/**

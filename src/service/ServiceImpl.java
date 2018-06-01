@@ -53,7 +53,6 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public Map<Integer, Compte> afficherComptesDebiteurs(Agence a) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	
@@ -111,13 +110,12 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void modifierClient(Client p) {
-		// TODO Auto-generated method stub
-		
+		// TODO A implémenter en V2
 	}
 
 	@Override
 	public void supprimerClient(Client p) {
-		// TODO Auto-generated method stub
+		// TODO A implémenter en V2
 		
 	}
 
@@ -144,13 +142,13 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void modifierCompte(Compte c) {
-		// TODO Auto-generated method stub
+		// TODO to implement in V2
 		
 	}
 
 	@Override
 	public void supprimerCompte(Compte c) {
-		// TODO Auto-generated method stub
+		// TODO A implémenter en V2
 		
 	}
 
@@ -173,7 +171,7 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void debiterCompte(Compte c, double mt) {
-		// TODO debiter 
+		// TODO debiter gérer exceptions ou if
 		c.setSolde(c.getSolde() - mt);
 	}
 
@@ -204,7 +202,7 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void supprimerPlacement(Placement p) {
-		// TODO Auto-generated method stub
+		// TODO A implémenter en V2
 		
 	}
 

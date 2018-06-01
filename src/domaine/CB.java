@@ -19,7 +19,6 @@ public abstract class CB {
 	 */
 	public CB() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

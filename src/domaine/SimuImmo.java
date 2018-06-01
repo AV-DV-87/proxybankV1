@@ -11,7 +11,6 @@ public class SimuImmo extends Simulation {
 	 */
 	public SimuImmo() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 }

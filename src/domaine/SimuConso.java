@@ -12,7 +12,6 @@ public class SimuConso extends Simulation {
 	 */
 	public SimuConso() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 

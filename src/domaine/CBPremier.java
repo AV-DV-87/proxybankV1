@@ -12,7 +12,6 @@ public class CBPremier extends CB {
 	 */
 	public CBPremier() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 }

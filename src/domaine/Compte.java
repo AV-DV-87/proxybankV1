@@ -22,7 +22,6 @@ public abstract class Compte {
 	 */
 	public Compte() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

@@ -19,7 +19,6 @@ public class CompteCourant extends Compte {
 	 */
 	public CompteCourant() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 

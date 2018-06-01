@@ -11,7 +11,6 @@ public class CBElectron extends CB {
 	 */
 	public CBElectron() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	

@@ -25,28 +25,29 @@ public interface Iservice {
 	 * @return Map<Integer, Agence> retourne une liste
 	 */
 	public Map<Integer, Agence> ajouterAgence(Agence a);
+	
 	/**
 	 * Agence Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
 	 * @param  a de type agence
 	 */
 	public void modifierAgence(Agence a);
+	
 	/**
 	 * Agence Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @param a de type agence
 	 */
 	public void supprimerAgence(Agence a);
+	
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @param agences  de type agence
 	 */
-	
 	public void listeAgence(Map<Integer, Agence> agences);
 	/**
 	 *Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @param c  de type Client
 	 */
-	
 	public void afficherClient(Client c);
 	
 	
@@ -83,6 +84,10 @@ public interface Iservice {
 	 * @param CBlist de type Map
 	 */
 	public void listeCB(Map<Integer, Map> CBlist);
+	
+	//------------------------CONSEILLER------------------------
+	
+
 	
 	//------------------------CLIENT------------------------
 	/**
@@ -158,8 +163,8 @@ public interface Iservice {
 	//------------------------PLACEMENT------------------------
 	/**
 	 * Stockage d'un placement dans une collection.
-	 * @param Placement p un placment à stocker
-	 * @return Map<Integer, PLacement>
+	 * @param p un placement à stocker
+	 * @return Map
 	 */
 	public Map<Integer, Placement> ajouterPlacement(Placement p);
 	/**
@@ -179,6 +184,7 @@ public interface Iservice {
 	/**
 	 * Stockage d'un virement dans une Collection.
 	 * @param v de type virement
+	 * @return Map
 	 */
 	public Map<Integer, Virement> creerVirement(Virement v);
 	/**
