@@ -6,7 +6,7 @@ package domaine;
  * @author Badr
  *
  */
-public class CB {
+public abstract class CB {
 
 	// ATTRIBUTS
 	/**
@@ -16,12 +16,12 @@ public class CB {
 	/**
 	 * code c'est le code de la CB compser de 4 chiffres
 	 */
-	private int code;
+	protected int code;
 
 	/**
 	 * le proprietaire de la carte est de type Client
 	 */
-	private Client proprietaire;
+	protected Client proprietaire;
 
 	// CONSTRUCTEUR
 	/**
