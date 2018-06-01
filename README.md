@@ -18,7 +18,7 @@ JRE de Java 10 sur un poste Windows ou Mac.
 * Telecharger l'archive projet-av-ba.jar
 * Ouvrir un invite de cmd
 * Se positionner dans le dossier où se trouve le .jar
-* Executer la commande "java projet-av-ba.jar"
+* Executer la commande "java -jar projet-av-ba.jar"
 
 
 ## Tests d'affichage directement dans la console
