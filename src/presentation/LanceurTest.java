@@ -2,6 +2,7 @@ package presentation;
 
 import java.util.Hashtable;
 import java.util.Map;
+import java.util.Scanner;
 
 import domaine.Client;
 import domaine.Compte;
@@ -66,10 +67,29 @@ public class LanceurTest {
 		service.listeClient(resultatsCl);
 		
 		//Execution d'un virement 
+		
 		service.executerVirement(vir, ce, cc);
 		System.out.println("-----------------------------------------------------");
 		System.out.println("Affichage de la liste des comptes et propriétaires");
 		service.listeCompte(resultatsC);
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("-----------LISTE DE COMPTES-----------");
+		service.listeCompte(resultatsC);
+		
+		System.out.println("Veuillez taper l'id du compte à débiter");
+		int debit = scan.nextInt();
+		System.out.println(resultatsC.get(debit).toString());
+		
+		System.out.println("Veuillez taper l'id du compte à créditer");
+		int credit = scan.nextInt();
+		
+		System.out.println("Veuillez saisir un identifiant pour ce virement :");
+		int id = scan.nextInt();
+		
+		
+		
+		
 		
 		//Procéder à un placement
 		service.executerPlacement(ce2, pla);

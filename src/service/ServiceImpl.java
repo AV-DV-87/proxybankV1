@@ -58,19 +58,19 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void modifierCB(CB cb) {
-		// TODO Auto-generated method stub
+		// TODO en V2
 		
 	}
 	
 	@Override
 	public void supprimerCB(CB cb) {
-		// TODO Auto-generated method stub
+		// TODO en V2
 		
 	}
 
 	@Override
 	public void listeCB(Map<Integer, Map> CBlist) {
-		// TODO Auto-generated method stub
+		// TODO en V2
 		
 	}
 	
@@ -78,19 +78,19 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void afficherClient(Client c) {
-		// TODO Auto-generated method stub
+		// TODO en V2
 		
 	}
 
 	@Override
 	public void attribuerCompte(Compte c, Client cl) {
-		// TODO Auto-generated method stub
+		// TODO en V2
 		
 	}
 
 	@Override
 	public void atttribuerCB(CB cb, Client c) {
-		// TODO Auto-generated method stub
+		// TODO en V2
 		
 	}
 	
