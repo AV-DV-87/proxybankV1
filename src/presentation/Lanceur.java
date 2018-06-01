@@ -4,6 +4,7 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.Scanner;
 
+import domaine.Agence;
 import domaine.Client;
 import domaine.Compte;
 import domaine.CompteCourant;
@@ -60,6 +61,10 @@ public class Lanceur {
 		Map<Integer, Placement> resultatsPla = new Hashtable<Integer, Placement>();
 		Placement pla = new Placement(1, 50000.00, 0.08, 24,"Paris");
 		resultatsPla = service.ajouterPlacement(pla);
+		
+		//table des Agences
+		Map<Integer, Agence> resultatAg = new Hashtable<Integer, Agence>();
+		Agence ag1 = new Agence(1,"20/05/2018");
 		
 		//attribuer les comptes aux client
 		service.attribuerCompte(cc, cl1);
