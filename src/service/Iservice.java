@@ -21,14 +21,14 @@ public interface Iservice {
 	//------------------------AGENCE------------------------
 	/**
 	 * Permet d'afficher la liste de toutes les agences déjà enregistrée.
-	 * @param Agence a
-	 * @return Map<Integer, Agence>
+	 * @param Agence a Permet d'afficher la liste de toutes les agences déjà enregistrée.
+	 * @return Map<Integer, Agence> la liste de toutes les agences déjà enregistrée.
 	 */
 	public Map<Integer, Agence> ajouterAgence(Agence a);
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
-	 * @param  a Agence
+	 * @param  a Agence Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 */
 	public void modifierAgence(Agence a);
 	public void supprimerAgence(Agence a);
@@ -46,25 +46,25 @@ public interface Iservice {
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
-	 * @param Agence
+	 * @param Agence Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 */
 	public Map<Integer, CB> ajouterCB(CB cb);
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
-	 * @param cb
+	 * @param cb Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 */
 	public void modifierCB(CB cb);
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
-	 * @param Agence
+	 * @param Agence Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 */
 	public void supprimerCB(CB cb);
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
-	 * @param Agence
+	 * @param Agence Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 */
 	public void listeCB(Map<Integer, Map> CBlist);
 	
@@ -73,7 +73,7 @@ public interface Iservice {
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
-	 * @param Agence
+	 * @param Agence Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 */
 	public void modifierClient(Client p);
 	public void supprimerClient(Client p);
@@ -81,14 +81,14 @@ public interface Iservice {
 	/**
 	 * Permet d'attribuer un Compte à un Client.
 	 * 
-	 * @param Compte
-	 * @param Client
+	 * @param Compte Permet d'attribuer un Compte à un Client.
+	 * @param Client Permet d'attribuer un Compte à un Client.
 	 */
 	public void attribuerCompte(Compte c, Client cl);
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
-	 * @param Agence
+	 * @param Agence Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 */
 	public void atttribuerCB(CB cb, Client c);
 	
@@ -97,18 +97,18 @@ public interface Iservice {
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
-	 * @param Agence
+	 * @param Agence Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 */
 	public void modifierCompte(Compte c);
 	/**
 	 * Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 * @author Arnaud
-	 * @param Agence
+	 * @param Agence Cette méthode sera implémentée en V2, une fois la couche DAO ajoutée.
 	 */
 	public void supprimerCompte(Compte c);
 	/**
 	 * Méthode permettant d'afficher la liste de l'ensemble des comptes.
-	 * @param comptes
+	 * @param comptes Méthode permettant d'afficher la liste de l'ensemble des comptes.
 	 */
 	public void listeCompte(Map<Integer, Compte> comptes);
 	public void crediterCompte(Compte c, double mt);
@@ -117,7 +117,7 @@ public interface Iservice {
 	//------------------------PLACEMENT------------------------
 	/**
 	 * Stockage d'un placement dans une collection.
-	 * @param Placement p
+	 * @param Placement p un placment à stocker
 	 * @return Map<Integer, PLacement>
 	 */
 	public Map<Integer, Placement> ajouterPlacement(Placement p);

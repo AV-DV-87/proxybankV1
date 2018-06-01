@@ -12,10 +12,10 @@ public class Conseiller extends Personne {
 	/**
 	 * Constructeur avec paramètre
 	 * 
-	 * @param id
-	 * @param nom
-	 * @param prenom
-	 * @param listClient
+	 * @param id identifiant conseiller
+	 * @param nom nom conseiller
+	 * @param prenom prenom conseiller
+	 * @param listClient liste des client gerer par le conseiller
 	 */
 	public Conseiller(int id, String nom, String prenom, Collection<Client> listClient) {
 		super(id, nom, prenom);

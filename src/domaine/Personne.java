@@ -24,9 +24,9 @@ public abstract class Personne {
 	
 	/**
 	 * consructeur avec paramètres
-	 * @param id
-	 * @param nom
-	 * @param prenom
+	 * @param id identifiant personne
+	 * @param nom nom personne
+	 * @param prenom prénom personne
 	 */
 	public Personne(int id, String nom, String prenom) {
 		super();

@@ -27,10 +27,10 @@ public class Virement {
 	
 	//CONSTRUCTOR
 	/**
-	 * @param id
-	 * @param montant
-	 * @param dateVirement
-	 * @param description
+	 * @param id identifiant du virement pour pouvoir tenir un historique des virements dans les comptes
+	 * @param montant Montant du virement effectué
+	 * @param dateVirement Date où le virement a été effectué
+	 * @param description Message saisi par le conseiller pour expliquer la raison de cette opération. 
 	 */
 	public Virement(int id, double montant, String dateVirement, String description) {
 		super();

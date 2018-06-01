@@ -8,10 +8,10 @@ public class Gerant extends Personne {
 
 	/**
 	 * constructeur avec paramétre
-	 * @param id
-	 * @param nom
-	 * @param prenom
-	 * @param agence
+	 * @param id identifiant gerant
+	 * @param nom nom gerant
+	 * @param prenom prenom gerant
+	 * @param agence objet agence de type agence
 	 */
 	
 	public Gerant(int id, String nom, String prenom, Agence agence) {

@@ -9,21 +9,10 @@ package domaine;
  *
  */
 public abstract class Compte {
-	/**
-	 * id correspond à l'identifiant du compte
-	 */
+	
 	private int id;
-	/**
-	 * solde correspond au Solde du compte
-	 */
 	protected double solde;
-	/**
-	 * dateOuverture correspond a la date du réation du compte
-	 */
 	protected String dateOuverture;
-	/**
-	 * proprietaire du compte de type client
-	 */
 	protected Client proprietaire;
 	
 	
@@ -38,9 +27,9 @@ public abstract class Compte {
 
 	/**
 	 * Constructeur avec tous les attributs.
-	 * @param id
-	 * @param solde
-	 * @param dateOuverture
+	 * @param id id correspond à l'identifiant du compte
+	 * @param solde solde correspond au Solde du compte
+	 * @param dateOuverture date d'ouverture du compte
 	 */
 	public Compte(int id, double solde, String dateOuverture) {
 		super();

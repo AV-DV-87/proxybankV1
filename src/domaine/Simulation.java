@@ -32,10 +32,10 @@ public abstract class Simulation {
 	}
 	/**
 	 * constructeur avec touts les variables
-	 * @param id
-	 * @param montant
-	 * @param date
-	 * @param taux
+	 * @param id id correspond au Numero de simulation
+	 * @param montant montant du pret
+	 * @param date duree du remboursement en Mois
+	 * @param taux taux d'intret du pret
 	 */
 	public Simulation(int id, double montant, String date, double taux) {
 		super();

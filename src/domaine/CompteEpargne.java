@@ -25,7 +25,7 @@ public class CompteEpargne extends Compte {
 	/**
 	 * Cosntructeur tous attributs.
 	 * 
-	 * @param taux
+	 * @param taux Taux d'intérêt définis par défaut .
 	 */
 	public CompteEpargne(int id, double solde, String dateOuverture, double taux) {
 		super(id, solde, dateOuverture);

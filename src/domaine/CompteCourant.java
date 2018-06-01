@@ -24,9 +24,13 @@ public class CompteCourant extends Compte {
 
 
 	/**
-	 * Constructeur avec tous les attributs
-	 * @param decouvert
+	 *  Constructeur avec tous les attributs
+	 * @param id identifiant du compte
+	 * @param solde solde du compte
+	 * @param dateOuverture date d'ouverture du compte
+	 * @param decouvert Decouvert autorisé sur ce compte.
 	 */
+	
 	public CompteCourant(int id, double solde, String dateOuverture, double decouvert) {
 		super(id, solde, dateOuverture);
 		this.decouvert = decouvert;

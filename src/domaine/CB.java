@@ -9,18 +9,8 @@ package domaine;
 public abstract class CB {
 
 	// ATTRIBUTS
-	/**
-	 * id c'est le numéro de la CB
-	 */
 	private int id;
-	/**
-	 * code c'est le code de la CB compser de 4 chiffres
-	 */
 	protected int code;
-
-	/**
-	 * le proprietaire de la carte est de type Client
-	 */
 	protected Client proprietaire;
 
 	// CONSTRUCTEUR
@@ -35,9 +25,9 @@ public abstract class CB {
 	/**
 	 * Constructeur avec paramètres
 	 * 
-	 * @param id
-	 * @param code
-	 * @param proprietaire
+	 * @param id  c'est le numéro de la CB
+	 * @param code c'est le code de la CB compser de 4 chiffres
+	 * @param proprietaire le proprietaire de la carte est de type Client
 	 */
 	public CB(int id, int code, Client proprietaire) {
 		super();
