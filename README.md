@@ -4,6 +4,7 @@ Première version de l'application pour notre client Proxy Banque:
 * Architecture globale n-tier : Presentation, Domaine et Service.
 * Developpement de 2 lots concernant le service de Virement Compte à Compte
 ainsi que le service de Placement financier pour clients fortunés.
+*Ajout d'une couche exception en prévision de la gestion de l'ensemble exceptions.
 * ATTENTION ce projet ne comprend pas de couche (DAO) de gestion de BDD ni de BDD
 les tests sont effectués gràce à des collections initialisées et alimentées directement dans
 le lanceur.
