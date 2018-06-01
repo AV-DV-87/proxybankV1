@@ -1,8 +1,3 @@
-# proxybankV1-Badr-Arno-
-
-
-# Installation et configuration requise
-
 # ProxyBankV1-Badr-Arno
 
 Première version de l'application pour notre client Proxy Banque:
