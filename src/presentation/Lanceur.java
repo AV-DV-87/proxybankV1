@@ -126,7 +126,7 @@ public class Lanceur {
 					else if (choixOptionConseiller == 3) {
 						// 2em SOUS MENU VIREMENT
 						System.out.println("-------------------------- Virement-----------------------------");
-						System.out.println("TAPER 1 pour effectuer un virrment compte a compte ");
+						System.out.println("TAPER 1 pour effectuer un virement compte a compte ");
 						System.out.println("TAPER 0 pour quitter");
 						int choixGestionCompte = sc.nextInt();
 						while (choixGestionCompte != 0) {
@@ -161,7 +161,7 @@ public class Lanceur {
 
 									}
 									System.out.println("-------------------------- Virement-----------------------------");
-									System.out.println("TAPER 1 pour effectuer un virrment compte a compte ");
+									System.out.println("TAPER 1 pour effectuer un virement compte a compte ");
 									System.out.println("TAPER 0 pour quitter");
 									choixGestionCompte = sc.nextInt();
 								} // END 3eme SOUS MENU VIRMENT
