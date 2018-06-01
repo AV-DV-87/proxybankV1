@@ -82,6 +82,12 @@ public class ServiceImpl implements Iservice {
 	}
 
 	@Override
+	public void attribuerCompte(Compte c, Client cl) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
 	public void atttribuerCB(CB cb, Client c) {
 		// TODO Auto-generated method stub
 		
@@ -130,49 +136,6 @@ public class ServiceImpl implements Iservice {
 		c.setSolde(c.getSolde() - mt);
 	}
 
-	//-----------------------------CLIENTS-----------------------------
-	
-		@Override
-		public Map<Integer, Client> ajouterClient(Client cl) {
-			clients.put(cl.getId(), cl);
-			return clients;
-		}
-
-		@Override
-		public void modifierClient(Client p) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void supprimerClient(Client p) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void listeClient(Map<Integer, Client> clients) {
-			for (Map.Entry<Integer, Client> entry : clients.entrySet()) {
-				 System.out.println(entry);
-				 if(entry.getValue().getListCompte()!=null)
-				 {
-					 for (Compte compte : entry.getValue().getListCompte()) {
-						System.out.println(compte);
-					}
-				 }
-			 }
-		}
-		
-		@Override
-		public void attribuerCompte(Compte c, Client cl) {
-			//récupère la liste des comptes du client et ajoute le compte
-			cl.getListCompte().add(c);
-			//a l'inverse défini le client comme propriétaire du compte
-			c.setProprietaire(cl);
-		}
-	
-	//-----------------------------VIREMENT-----------------------------
-	
 	@Override
 	public void executerVirement(Virement v, Compte cd, Compte cc) {
 		
@@ -186,28 +149,37 @@ public class ServiceImpl implements Iservice {
 		System.out.println("Un virement de "+v.getMontant()+"€ a été effectué du compte numéro " +cd.getId()+" au compte numéro "+cc.getId()+".");
 		
 	}
-
-	@Override
-<<<<<<< HEAD
-	public void crediterCompte(Compte c, double mt) {
-		// TODO crediter gérer exceptions ou if
-		c.setSolde(c.getSolde() + mt);
-	}
-
-	@Override
-	public void debiterCompte(Compte c, double mt) {
-		// TODO debiter gérer exceptions
-		c.setSolde(c.getSolde() - mt);
-	}
-
-	
-=======
 	public Map<Integer, Virement> creerVirement(Virement v) {
 		virements.put(v.getId(), v);
 		return virements;
 		
-	}	
->>>>>>> d700a2b708feb7e9cdc1b033a3eb2ca7ac26e94d
+	}
+
+	@Override
+	public Map<Integer, Client> ajouterClient(Client p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void modifierClient(Client p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void supprimerClient(Client p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void listeClient(Map<Integer, Client> clients) {
+		// TODO Auto-generated method stub
+		
+	}
+		
+
 	
 	
 }
