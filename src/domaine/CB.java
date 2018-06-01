@@ -1,7 +1,7 @@
 package domaine;
 
 /**
- * Classe qui correspond au Carte Bancaire
+ * Classe qui correspond au Carte Bancaire et classe mère de tous les classes CB
  * 
  * @author Badr
  *
