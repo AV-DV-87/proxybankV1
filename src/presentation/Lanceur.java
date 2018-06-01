@@ -181,7 +181,7 @@ public class Lanceur {
 									if (choixGestionCompte == 1) {
 
 										System.out.println("choisir un client :");
-										String choisirUnClient = sc.nextLine();
+										int choisirUnClient = sc.nextInt();
 
 										System.out.println("choisir le compte a debité :");
 										String CompteDebiter = sc.nextLine();
