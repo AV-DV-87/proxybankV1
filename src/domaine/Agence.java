@@ -12,9 +12,25 @@ import java.util.Collection;
  */
 public class Agence {
 	
+	/**
+	 * identifiant de l'agence
+	 */
 	private int id;
+	/**
+	 * nom de l'agence
+	 */
+	private String nom;
+	/**
+	 * date de création de l'agence
+	 */
 	private String dateCreation;
+	/**
+	 * LE gerant unique de l'agence
+	 */
 	private Gerant gerant;
+	/**
+	 * Les conseillers travaillant dans l'agence
+	 */
 	private Collection<Conseiller> ListConseiller= new ArrayList();
 	
 	
@@ -25,12 +41,10 @@ public class Agence {
 	 * @param  gerant  c'est le gérant de l'agence il fait l'audite et gére l'agence
 	 * @param  listConseiller ListeConseiller c'est la liste des Conseillers de l'agence
 	 */
-	public Agence(int id, String dateCreation, Gerant gerant, Collection<Conseiller> listConseiller) {
+	public Agence(int id, String dateCreation) {
 		super();
 		this.id = id;
 		this.dateCreation = dateCreation;
-		this.gerant = gerant;
-		ListConseiller = listConseiller;
 	}
 
 	/**

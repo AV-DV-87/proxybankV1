@@ -83,8 +83,9 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void attribuerCompte(Compte c, Client cl) {
-		// TODO en V2
-		
+		cl.getListCompte().add(c);
+		//opération inverse pour être synchronysé car pas encore de bdd
+		c.setProprietaire(cl);
 	}
 
 	@Override
